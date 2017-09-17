@@ -5,11 +5,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 // Grabs the Routes
 // import routes from './config/react-routes.jsx';
-import Home from './components/Home.jsx';
+import Main from './components/Main.jsx';
 
 const App = () => (
   <BrowserRouter>
-    <Home />
+    <Main />
   </BrowserRouter>
 );
 

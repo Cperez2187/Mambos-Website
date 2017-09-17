@@ -2,10 +2,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
-const mongoose = require("mongoose");
-
-// Set mongoose to leverage built in JavaScript ES6 Promises
-mongoose.Promise = Promise;
 
 // Create Instance of Express
 const app = express();
@@ -24,22 +20,7 @@ app.use(express.static("public"));
 // -------------------------------------------------
 
 // MongoDB Configuration configuration 
-mongoose.connect("mongodb://heroku_ht48r83d:fgct50t7uoguq0kq31rrlmmlbq@ds129374.mlab.com:29374/heroku_ht48r83d", {
-  useMongoClient: true
-});
-// mongoose.connect("mongodb://localhost/TestNYTReact", {
-//   useMongoClient: true
-// });
 
-let db = mongoose.connection;
-
-db.on("error", function(err) {
-  console.log("Mongoose Error: ", err);
-});
-
-db.once("open", function() {
-  console.log("Mongoose connection successful.");
-});
 
 // -----------------------------------------------
 // require routes
