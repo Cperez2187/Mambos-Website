@@ -23,7 +23,9 @@ export default class Main extends Component {
 
   render() {
     return (
-      {/*Write code here */}
+      <div>
+        {/* Write code here */} 
+      </div>
     );
   }
 };
