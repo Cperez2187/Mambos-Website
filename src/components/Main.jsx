@@ -25,8 +25,6 @@ export default class Main extends Component {
     return (
       <div>
         {/* Write code here */} 
-        <AboutUs />
-        <ContactUs />
       </div>
     );
   }
