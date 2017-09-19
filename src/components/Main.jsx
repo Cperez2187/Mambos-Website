@@ -12,7 +12,7 @@ import AboutUs from './Children/AboutUs.jsx';
 import Menu from './Children/Menu.jsx';
 import Social from './Children/Social.jsx';
 import Contact from './Children/Contact.jsx';
-import footer from './Children/Footer.jsx';
+import Footer from './Children/Footer.jsx';
 
 // ***** Might change this to Stateless *****
 export default class Main extends Component {
@@ -25,9 +25,12 @@ export default class Main extends Component {
     return (
       <div className="container-fluid nopadding">
         {/* Write code here */} 
+        <NavBar />
+        <Carousel />
         <AboutUs />
         <Social />
         <Contact />
+        <Footer />
       </div>
     );
   }

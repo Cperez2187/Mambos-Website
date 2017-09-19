@@ -13,8 +13,8 @@ const Social = () => {
   return (
     <section className="section-social row" id="section-social">
     {/*Write code here */}
-		<Reviews />
-		<Media />
+      <Reviews />
+      <Media />
     </section>
   );
 }
