@@ -11,7 +11,7 @@ import Carousel from './Children/Carousel.jsx';
 import AboutUs from './Children/AboutUs.jsx';
 import Menu from './Children/Menu.jsx';
 import Social from './Children/Social/Social.jsx';
-import ContactUs from './Children/Contact/ContactUs.jsx';
+import Contact from './Children/Contact.jsx';
 import footer from './Children/Footer.jsx';
 
 // ***** Might change this to Stateless *****
@@ -23,8 +23,10 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container-fluid nopadding">
         {/* Write code here */} 
+        <AboutUs />
+        <Contact />
       </div>
     );
   }
