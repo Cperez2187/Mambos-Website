@@ -10,7 +10,7 @@ import NavBar from './Children/NavBar.jsx';
 import Carousel from './Children/Carousel.jsx';
 import AboutUs from './Children/AboutUs.jsx';
 import Menu from './Children/Menu.jsx';
-import Social from './Children/Social/Social.jsx';
+import Social from './Children/Social.jsx';
 import Contact from './Children/Contact.jsx';
 import footer from './Children/Footer.jsx';
 
@@ -26,6 +26,7 @@ export default class Main extends Component {
       <div className="container-fluid nopadding">
         {/* Write code here */} 
         <AboutUs />
+        <Social />
         <Contact />
       </div>
     );

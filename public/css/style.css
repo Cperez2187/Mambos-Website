@@ -3,10 +3,22 @@ h1 {
 }
 
 .text-div {
-	padding: 20px;
+	padding: 50px;
 }
 
 .nopadding {
 	padding: 0 !important;
 	margin: 0 !important;
+}
+
+.fa {
+	vertical-align: middle;
+}
+
+.contact-info {
+	padding: 0 30px;
+}
+
+a, a:hover, a:focus {
+	text-decoration: none;
 }

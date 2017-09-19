@@ -1,4 +1,4 @@
-const Article = require('../models/Menu.js');
+const Menu = require('../models/Menu.js');
 
 module.exports = (app) => {
 
@@ -7,22 +7,46 @@ module.exports = (app) => {
     res.sendFile(__dirname + "/public/index.html");
   });
 
-  // This is the route we will send GET requests to retrieve our most recent search data.
-  // We will call this route the moment the 'Main' component gets mounted
-  app.get("/api", (req, res) => {
-
+  // retrieve all menu items of specified category (i.e. appetizers)
+  app.get("/api/menu", (req, res) => {
+    Menu.findAll({
+      where: {
+        category: req.body.category
+      }
+    }).then((result) => {
+      res.send(result); 
+    });
   });
 
-  // This is the route we will send POST requests to save each search.
-  app.post("/api", (req, res) => {
-    console.log("BODY: " + req.body);
-
+  // insert new menu item
+  app.post("/api/menu", (req, res) => {
+    Menu.create(req.body).then((result) => {
+      res.send(result); 
+    });
   });
 
-  // This is the route we will DELETE requests
-  // to delete an article from the database
-  app.delete("/api", (req, res) => {
-    
+  // update menu item with specified id
+  app.put("/api/menu"), (req, res) => {
+    Menu.update({
+      //TODO: fill in updateable fields
+    },{
+      where: {
+        id:req.body.id
+      }
+    }).then((result) => {
+      res.send(result); 
+    });
+  }
+
+  // delete menu item with specified id
+  app.delete("/api/menu", (req, res) => {
+    Menu.destroy({
+      where: {
+        id: req.body.id
+      }
+    }).then((result) => {
+      res.send(result); 
+    });
   });
 
 };
