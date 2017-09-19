@@ -1,0 +1,12 @@
+h1 {
+	text-transform: uppercase;
+}
+
+.text-div {
+	padding: 20px;
+}
+
+.nopadding {
+	padding: 0 !important;
+	margin: 0 !important;
+}
