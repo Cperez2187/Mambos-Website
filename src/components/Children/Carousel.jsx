@@ -10,7 +10,7 @@ import React from 'react';
 const Carousel = (props) => {
   return (
 
-    <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" className="carousel slide row" data-ride="carousel">
 
       {/* Indicators */}
       <ol className="carousel-indicators">

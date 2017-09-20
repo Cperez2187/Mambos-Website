@@ -14,7 +14,7 @@ export default class Social extends Component {
   }
   render() {
     return (
-		<div className="col-md-6 text-center">
+		<div className="col-md-6 text-center text-div">
       {/*Write code here */}
   		<h1>Social Media</h1>
       <img src="http://lorempixel.com/g/550/550/" />
