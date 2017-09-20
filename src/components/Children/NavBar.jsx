@@ -17,19 +17,19 @@ const  NavBar = (props) => {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#page-top">Home</a>
+              <a className="nav-link js-scroll-trigger" href="#">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#about">About</a>
+              <a className="nav-link js-scroll-trigger" href="#section-about">About</a>
             </li>
             <li className="nav-item">
               <a className="nav-link js-scroll-trigger" href="#menu">Menu</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#social">Social</a>
+              <a className="nav-link js-scroll-trigger" href="#section-social">Social</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a className="nav-link js-scroll-trigger" href="#section-contact">Contact</a>
             </li>
           </ul>
         </div>

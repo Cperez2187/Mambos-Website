@@ -11,21 +11,17 @@ const Footer = (props) => {
   return (
     
     <div className="footer-basic">
-      <div>
-          <footer>
-
-              <ul className="list-inline">
-                  <li><a href="/">Home</a></li>
-                  <li><a href='#'>About </a></li>
-                  <li><a href='#'>Menu</a></li>
-                  <li><a href="#">Social </a></li>
-                  <li><a href="#">Contact </a></li>
-                  <li><a href='#'>Manager Portal </a></li>
-              </ul>
-              <p className="copyright">Catherine Liu, Cesar Perez, Nick Verges © 2017</p>
-
-          </footer>
-      </div>
+      <footer>
+        <ul className="list-inline">
+          <li><a href="/">Home</a></li>
+          <li><a href='#section-about'>About </a></li>
+          <li><a href='#'>Menu</a></li>
+          <li><a href="#section-social">Social </a></li>
+          <li><a href="#section-contact">Contact </a></li>
+          <li><a href='#'>Manager Portal </a></li>
+        </ul>
+        <p className="copyright">Catherine Liu, Cesar Perez, Nick Verges © 2017</p>
+      </footer>
     </div>
 
   );
