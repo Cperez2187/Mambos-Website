@@ -13,8 +13,8 @@ const Contact = () => {
   return (
     <section className="section-contact row" id="section-contact">
     {/*Write code here */}
-		<ContactUs />
-		<Map />
+      <ContactUs />
+      <Map />
     </section>
   );
 }
