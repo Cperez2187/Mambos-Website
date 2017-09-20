@@ -34,8 +34,9 @@ export default class Main extends Component {
         <div className="container-fluid nopadding">
 
           {/* Write code here */}
-            <NavBar />
+            
             <Carousel />
+            <NavBar />
             <AboutUs />
             <Social />
             <Contact />
@@ -46,3 +47,4 @@ export default class Main extends Component {
     );
   }
 };
+
