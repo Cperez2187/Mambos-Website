@@ -1,3 +1,5 @@
 #mainNav {
     background-color: #b94847;
+    z-index: 999;
+    top: -1px !important;
 }

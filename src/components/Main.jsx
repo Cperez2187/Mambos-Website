@@ -14,6 +14,9 @@ import Social from './Children/Social.jsx';
 import Contact from './Children/Contact.jsx';
 import Footer from './Children/Footer.jsx';
 
+// Used for 'sticky' Nav bar
+import stickybits from 'stickybits';
+
 // ***** Might change this to Stateless *****
 export default class Main extends Component {
   constructor() {
@@ -21,12 +24,16 @@ export default class Main extends Component {
     this.state = {}
   }
 
+  componentDidMount() {
+    stickybits('.navbar');
+  }
+
   render() {
     return (
       <div className="container-fluid nopadding">
         {/* Write code here */} 
-        <NavBar />
         <Carousel />
+        <NavBar />
         <AboutUs />
         <Social />
         <Contact />
