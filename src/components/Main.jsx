@@ -30,15 +30,19 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        {/* Write code here */} 
-        <Carousel />
-        <NavBar />
-        <AboutUs />
-        <Social />
-        <Contact />
-        <Footer />
-      </div>
+
+        <div className="container-fluid nopadding">
+
+          {/* Write code here */}
+            <NavBar />
+            <Carousel />
+            <AboutUs />
+            <Social />
+            <Contact />
+            <Footer />
+            
+        </div>
+
     );
   }
 };
