@@ -23,7 +23,7 @@ export default class Main extends Component {
 
   render() {
     return (
-      <div className="container-fluid nopadding">
+      <div className="container-fluid">
         {/* Write code here */} 
         <AboutUs />
         <Social />
