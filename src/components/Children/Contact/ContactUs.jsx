@@ -13,7 +13,7 @@ const ContactUs = () => {
     {/*Write code here */}
     	<div className="container-fluid nopadding">
 	    	<h1 className="text-center">Contact Us</h1>
-	    	<div className="text-left">
+	    	<div className="text-left text-div">
 		    	<div className="row justify-content-around ">
 		    		<div className="col-md-5">
 		    			<p className=""><i className="fa fa-map-marker fa-3x fa-fw" aria-hidden="true"></i><a href="https://goo.gl/maps/X4Bm7UuSDx32" target="_blank">1950 N Arizona Ave, Suite 8</a></p>

@@ -9,7 +9,7 @@ import React from 'react';
 
 const Reviews = () => {
   return (
-  	<div className="col-md-6 text-center">
+  	<div className="col-md-6 text-center text-div">
     {/*Write code here */}
   		<h1>Reviews</h1>
     	<p>
