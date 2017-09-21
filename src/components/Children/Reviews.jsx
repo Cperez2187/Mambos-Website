@@ -9,7 +9,7 @@ import React from 'react';
 
 const Reviews = () => {
   return (
-  	<div className="col-md-6 text-center text-div">
+  	<section className="section-reviews text-center text-div" id="section-reviews">
     {/*Write code here */}
   		<h1>Reviews</h1>
     	<p>
@@ -18,7 +18,7 @@ const Reviews = () => {
       	<p>
 			Sed tincidunt mi vel nunc porta, et sagittis mauris sagittis. Donec convallis eu urna nec fermentum. Donec fermentum vulputate leo. Morbi id magna eros. Sed sit amet lacus lacus. Quisque ornare auctor orci vel elementum. In hac habitasse platea dictumst. Phasellus arcu nisl, blandit vel arcu eu, dignissim convallis nulla. Vestibulum sit amet erat at sem fringilla fringilla vitae eget lectus. Phasellus eget odio rutrum, fringilla tortor vel, ultricies ante. Pellentesque et viverra ante, ut blandit erat.
       	</p>
-    </div>
+    </section>
   );
 }
 

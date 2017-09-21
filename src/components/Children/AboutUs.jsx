@@ -11,10 +11,10 @@ const AboutUs = (props) => {
   return (
       <section className="section-about row" id="section-about">
     {/*Write code here */}
-        <div className="about-img pull-left col-md-4 nopadding" >
+        <div className="pull-left col-md-4 nopadding" id="about-img">
           <img className="pull-left" src="http://lorempixel.com/g/550/550/" />
         </div> 
-        <div className="about text-div pull-right col-md-8">
+        <div className="text-div pull-right col-md-8" id="about">
         	<h1 className="text-center">About Us</h1>
         	<p>
         		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc imperdiet lacinia dapibus. Nullam aliquam, mi eget vehicula pretium, neque leo eleifend felis, ut bibendum sapien felis vel augue. Cras vel faucibus libero. Fusce tortor felis, pulvinar tempor pharetra eu, cursus vel augue. Phasellus gravida erat sed nisi vehicula, nec molestie elit commodo. Quisque libero felis, maximus a aliquam ut, lobortis quis augue. Morbi accumsan commodo enim quis porttitor. Vivamus bibendum urna eu pulvinar vulputate. Nam eu tristique turpis. Fusce pellentesque libero eget ligula tempus volutpat. Vestibulum commodo tellus sed suscipit congue. Vivamus interdum velit vitae sem ornare, ac vestibulum ligula pretium.

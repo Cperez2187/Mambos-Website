@@ -11,6 +11,7 @@ import Carousel from './Children/Carousel.jsx';
 import AboutUs from './Children/AboutUs.jsx';
 import Menu from './Children/Menu.jsx';
 import Social from './Children/Social.jsx';
+import Reviews from './Children/Reviews.jsx';
 import Contact from './Children/Contact.jsx';
 import Footer from './Children/Footer.jsx';
 
@@ -36,6 +37,7 @@ export default class Main extends Component {
         <NavBar />
         <AboutUs />
         <Social />
+        <Reviews />
         <Contact />
         <Footer />
       </div>
