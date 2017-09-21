@@ -6,15 +6,14 @@
 */
 
 import React from 'react';
-import Reviews from './Social/Reviews.jsx';
-import Media from './Social/Media.jsx';
 
 const Social = () => {
   return (
     <section className="section-social row" id="section-social">
     {/*Write code here */}
-      <Reviews />
-      <Media />
+      {/*Write code here */}
+  		<h1>Social Media</h1>
+      <img src="http://lorempixel.com/g/550/550/" />
     </section>
   );
 }
