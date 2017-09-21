@@ -1,0 +1,13 @@
+#section-reviews {
+	background-image: url("../images/reviews.png");
+	background-size: cover;
+	color: white;
+}
+
+#section-reviews blockquote footer {
+	color: #DDDDDD;
+}
+
+.translucent-bg {
+	background-color: rgba(0,0,0,.5);
+}

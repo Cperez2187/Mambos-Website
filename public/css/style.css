@@ -1,10 +1,11 @@
 h1 {
     text-transform: uppercase;
+    margin-bottom: 3vh;
 }
 
 .text-div {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 
 .nopadding {
@@ -24,8 +25,24 @@ a,
 a:hover,
 a:focus {
     text-decoration: none;
+    color:#b94847;
+}
+
+a {
+	color: black;
+}
+
+a:hover,a:focus {
+	color: color:#b94847;;
 }
 
 #carouselExampleIndicators {
     height: 90vh;
+}
+
+/* ABOUT */
+
+#section-about {
+	background-image: url("../images/halftone.png");
+	background-repeat: repeat;
 }
