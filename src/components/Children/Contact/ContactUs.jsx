@@ -11,11 +11,11 @@ const ContactUs = () => {
   return (
     <div className="text-div contact pull-left col-md-8" id="contact">
     {/*Write code here */}
-    	<div className="container-fluid nopadding">
+    	<div className="container-fluid nopadding text-div">
 	    	<h1 className="text-center">Contact Us</h1>
 	    	<div className="text-left">
-		    	<div className="row justify-content-around ">
-		    		<div className="col-md-5">
+		    	<div className="row justify-content-md-center">
+		    		<div className="ml-md-auto col-md-5">
 		    			<p className="">
 		    				<a href="https://goo.gl/maps/X4Bm7UuSDx32" target="_blank">
 		    					<i className="fa fa-map-marker fa-3x fa-fw" aria-hidden="true"></i>
@@ -23,7 +23,7 @@ const ContactUs = () => {
 		    				</a>
 		    			</p>
 		    		</div>
-		    		<div className="col-md-5">
+		    		<div className="mr-md-auto col-md-3">
 		    			<p className="">
 		    				<a href="https://www.facebook.com/MambosKitchenAZ/" target="_blank">
 		    					<i className="fa fa-facebook-square fa-3x fa-fw" aria-hidden="true"></i>
@@ -33,7 +33,7 @@ const ContactUs = () => {
 		    		</div>
 		    	</div>
 		    	<div className="row justify-content-around">
-		    		<div className="col-md-5">
+		    		<div className="ml-md-auto col-md-5">
 		    			<p className="">
 		    				<a href="tel:+14807189210">
 		    					<i className="fa fa-phone fa-3x fa-fw" aria-hidden="true"></i>
@@ -41,9 +41,9 @@ const ContactUs = () => {
 		    				</a>
 		    			</p>
 		    		</div>
-		    		<div className="col-md-5">
+		    		<div className="mr-md-auto col-md-3">
 		    			<p className="">
-		    				<a href="https://www.instagram.com/mambos_kitchen/" target="_blank">
+		    				<a href="https://www.instagram.com/mambos_dkitchen/" target="_blank">
 		    					<i className="fa fa-instagram fa-3x fa-fw" aria-hidden="true"></i>
 		    					Follow us on Instagram
 		    				</a>
@@ -51,7 +51,7 @@ const ContactUs = () => {
 		    		</div>
 		    	</div>
 		    	<div className="row justify-content-around">
-		    		<div className="col-md-5">
+		    		<div className="ml-md-auto col-md-5">
 		    			<p className="">
 		    				<a href="mailto:mambosdominicankitchen@gmail.com">
 		    					<i className="fa fa-paper-plane fa-3x fa-fw" aria-hidden="true"></i>
@@ -59,7 +59,7 @@ const ContactUs = () => {
 		    				</a>
 		    			</p>
 		    		</div>
-		    		<div className="col-md-5">
+		    		<div className="mr-md-auto col-md-3">
 		    			<p className="">
 		    				<a href="https://www.yelp.com/biz/mambos-dominican-kitchen-chandler" target="_blank">
 		    					<i className="fa fa-yelp fa-3x fa-fw" aria-hidden="true"></i>
