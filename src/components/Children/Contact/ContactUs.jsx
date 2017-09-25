@@ -23,7 +23,7 @@ const ContactUs = () => {
 		    				</a>
 		    			</p>
 		    		</div>
-		    		<div className="mr-md-auto col-md-3">
+		    		<div className="mr-md-auto col-md-4">
 		    			<p className="">
 		    				<a href="https://www.facebook.com/MambosKitchenAZ/" target="_blank">
 		    					<i className="fa fa-facebook-square fa-3x fa-fw" aria-hidden="true"></i>
@@ -36,12 +36,12 @@ const ContactUs = () => {
 		    		<div className="ml-md-auto col-md-5">
 		    			<p className="">
 		    				<a href="tel:+14807189210">
-		    					<i className="fa fa-phone fa-3x fa-fw" aria-hidden="true"></i>
+		    					<i className="fa fa-phone-square fa-3x fa-fw" aria-hidden="true"></i>
 		    					(480)718-9210
 		    				</a>
 		    			</p>
 		    		</div>
-		    		<div className="mr-md-auto col-md-3">
+		    		<div className="mr-md-auto col-md-4">
 		    			<p className="">
 		    				<a href="https://www.instagram.com/mambos_dkitchen/" target="_blank">
 		    					<i className="fa fa-instagram fa-3x fa-fw" aria-hidden="true"></i>
@@ -54,12 +54,12 @@ const ContactUs = () => {
 		    		<div className="ml-md-auto col-md-5">
 		    			<p className="">
 		    				<a href="mailto:mambosdominicankitchen@gmail.com">
-		    					<i className="fa fa-paper-plane fa-3x fa-fw" aria-hidden="true"></i>
+		    					<i className="fa fa-envelope-square fa-3x fa-fw" aria-hidden="true"></i>
 		    					mambosdominicankitchen@gmail.com
 		    				</a>
 		    			</p>
 		    		</div>
-		    		<div className="mr-md-auto col-md-3">
+		    		<div className="mr-md-auto col-md-4">
 		    			<p className="">
 		    				<a href="https://www.yelp.com/biz/mambos-dominican-kitchen-chandler" target="_blank">
 		    					<i className="fa fa-yelp fa-3x fa-fw" aria-hidden="true"></i>

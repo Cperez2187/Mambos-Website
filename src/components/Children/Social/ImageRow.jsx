@@ -10,10 +10,10 @@ import Photo from './Photo.jsx'
 
 const ImageRow = (props) => {
   return (
-  	<div className="row justify-content-center">
+  	<div className="image-row row justify-content-center">
   		{ 
   			props.images.map(function(image, index) {
-  				return ( <Photo image={image} key={index}/> );
+  				return ( <Photo image={image} key={index} changePrimaryImage={props.changePrimaryImage}/> );
 	  		})
 	  	}
   	</div>

@@ -9,7 +9,7 @@ import React from 'react';
 
 const AboutUs = (props) => {
   return (
-      <section className="section-about row no-gutters" id="section-about">
+      <section className="section-about row" id="section-about">
     {/*Write code here */}
         <div className="pull-left col-md-4" id="about-img">
           <img className="pull-left" src="http://lorempixel.com/g/550/550/" />
