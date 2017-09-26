@@ -9,7 +9,7 @@ import React, { Component } from 'react';
 import NavBar from './Children/NavBar.jsx';
 import Carousel from './Children/Carousel.jsx';
 import AboutUs from './Children/AboutUs.jsx';
-import Menu from './Children/Menu.jsx';
+import Menu from './Children/Menu/Menu.jsx';
 import Social from './Children/Social.jsx';
 import Reviews from './Children/Reviews.jsx';
 import Contact from './Children/Contact.jsx';
@@ -36,6 +36,7 @@ export default class Main extends Component {
         <Carousel />
         <NavBar />
         <AboutUs />
+        <Menu />
         <Social />
         <Reviews />
         <Contact />
