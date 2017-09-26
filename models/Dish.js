@@ -12,14 +12,11 @@ module.exports = function(sequelize, DataTypes) {
 
             description: {
                 type: DataTypes.STRING,
-                allowNull: true,
-                validate: {
-                    len: [1]
-                }
+                allowNull: true
             },
            
-            price: { // TODO create price table? for different size/options for a dish
-                type: DataTypes.INTEGER(255),
+            price: {
+                type: DataTypes.STRING,
                 allowNull: false,
                 validate: {
                     len: [1]
@@ -29,14 +26,6 @@ module.exports = function(sequelize, DataTypes) {
             category: {
                 type: DataTypes.STRING,
                 allowNull: false,
-                validate: {
-                    len: [1]
-                }
-            },
-
-            size: {
-                type: DataTypes.STRING,
-                allowNull: true,
                 validate: {
                     len: [1]
                 }

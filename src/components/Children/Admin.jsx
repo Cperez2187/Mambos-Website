@@ -8,7 +8,7 @@
 import React, { Component } from 'react'; 
 import Router, { Link } from "react-router";
 
-export default class Menu extends Component {
+export default class Admin extends Component {
   constructor(props) {
     super(props);
 
@@ -23,7 +23,7 @@ export default class Menu extends Component {
           <Link to="/Child1/GrandChild2"><button className="btn btn-success btn-sm">Show Grandchild #2</button></Link>
       	</div>
 
-      	
+
       	<Category category="appetizer" />
       </div>
     );
