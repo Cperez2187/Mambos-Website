@@ -1,6 +1,7 @@
-html, body {
-	max-width: 100%;
-	overflow-x: hidden;
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -33,29 +34,36 @@ a:focus {
     text-decoration: none;
 }
 
-a, a:visited {
-	color: #30353B;
+a,
+a:visited {
+    color: #30353B;
 }
 
-a:hover, a:focus {
-	color: #B94847;;
+a:hover,
+a:focus {
+    color: #B94847;
+    ;
 }
 
 #carouselExampleIndicators {
     height: 90vh;
+    background-image: url('../images/small.png');
+    background-repeat: no-repeat;
 }
+
 
 /* ABOUT */
 
-#section-about, #section-social, #section-contact {
-	background-image: url("../images/concrete_seamless.png");
-	background-repeat: repeat;
+#section-about,
+#section-social,
+#section-contact {
+    background-image: url("../images/concrete_seamless.png");
+    background-repeat: repeat;
 }
 
-.parallax { 
+.parallax {
     /* Set a specific height */
-    height: 500px; 
-
+    height: 500px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -63,7 +71,9 @@ a:hover, a:focus {
     background-size: cover;
 }
 
+
 /* Turn off parallax scrolling for tablets and phones. Increase/decrease the pixels if needed */
+
 @media only screen and (max-device-width: 1024px) {
     .parallax {
         background-attachment: scroll;
