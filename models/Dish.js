@@ -1,10 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
 
-    let Menu = sequelize.define("Menu", {
+    let Dish = sequelize.define("Dish", {
 
             name: {
                 type: DataTypes.STRING,
-                allowNull: true,
+                allowNull: false,
                 validate: {
                     len: [1]
                 }
@@ -17,16 +17,24 @@ module.exports = function(sequelize, DataTypes) {
                     len: [1]
                 }
             },
-            
+           
             price: { // TODO create price table? for different size/options for a dish
                 type: DataTypes.INTEGER(255),
-                allowNull: true,
+                allowNull: false,
                 validate: {
                     len: [1]
                 }
             }, 
 
             category: {
+                type: DataTypes.STRING,
+                allowNull: false,
+                validate: {
+                    len: [1]
+                }
+            },
+
+            size: {
                 type: DataTypes.STRING,
                 allowNull: true,
                 validate: {
@@ -44,7 +52,7 @@ module.exports = function(sequelize, DataTypes) {
     //     });
     // };
 
-    return Menu;
+    return Dish;
 };
 
     
