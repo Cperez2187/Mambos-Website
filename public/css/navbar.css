@@ -4,3 +4,11 @@
     top: -1px !important;
     height: 10vh;
 }
+
+
+/* Link color */
+
+#navbarResponsive>ul>li>a {
+    color: #e4e5a1;
+    /* opacity: 0.8; */
+}
