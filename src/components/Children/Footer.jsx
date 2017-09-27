@@ -23,7 +23,7 @@ const Footer = (props) => {
           <footer>
 
               <ul className="list-inline">
-                  <li><a href="#">Home</a></li>
+                  <li><a href="/">Home</a></li>
                   <li><a href="#section-about">About </a></li>
                   <li><a href="#section-menu">Menu</a></li>
                   <li><a href="#section-social">Social </a></li>

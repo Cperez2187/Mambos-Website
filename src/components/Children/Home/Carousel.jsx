@@ -16,7 +16,6 @@ const Carousel = (props) => {
 
     <div id="carouselExampleIndicators" className="carousel slide row" data-ride="carousel">
 
-
       {/* Indicators */}
       <ol className="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
@@ -30,10 +29,10 @@ const Carousel = (props) => {
           <img className="d-block img-fluid" src="../../../images/FullSizeRender.jpg" alt="First slide" />
         </div>
         <div className="carousel-item">
-          <img className="d-block img-fluid" src="../../../images/food.jpg" alt="Second slide" />
+          <img className="d-block img-fluid" src="../../../images/IMG_0418.jpg" alt="Second slide" />
         </div>
         <div className="carousel-item">
-          <img className="d-block img-fluid" src="../../../images/mamboslogo.png" alt="Third slide" />
+          <img className="d-block img-fluid" src="../../../images/IMG_0416.jpg" alt="Third slide" />
         </div>
       </div>
 
