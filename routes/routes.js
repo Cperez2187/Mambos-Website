@@ -1,4 +1,4 @@
-const Menu = require('../models/Menu.js');
+const db = require('../models');
 
 module.exports = (app) => {
 
@@ -7,29 +7,34 @@ module.exports = (app) => {
     res.sendFile(__dirname + "/public/index.html");
   });
 
-  // retrieve all menu items of specified category (i.e. appetizers)
-  app.get("/api/menu", (req, res) => {
-    Menu.findAll({
-      where: {
-        category: req.body.category
-      }
-    }).then((result) => {
+  // retrieve all dishes of specified category (i.e. appetizers)
+  app.get("/api/dishes", (req, res) => {
+    if(req.body.category) { // find dishes by category
+      db.Dish.findAll({
+        where: {
+          category: req.body.category
+        }
+      }).then((result) => {
+        res.send(result); 
+      });
+    } else { // find all dishes
+      db.Dish.findAll()
+        .then((result) => {
+          res.send(result); 
+        });
+    }
+  });
+
+  // insert new dishes item
+  app.post("/api/dishes", (req, res) => {
+    db.Dish.create(req.body).then((result) => {
       res.send(result); 
     });
   });
 
-  // insert new menu item
-  app.post("/api/menu", (req, res) => {
-    Menu.create(req.body).then((result) => {
-      res.send(result); 
-    });
-  });
-
-  // update menu item with specified id
-  app.put("/api/menu"), (req, res) => {
-    Menu.update({
-      //TODO: fill in updateable fields
-    },{
+  // update dishes item with specified id
+  app.put("/api/dishes"), (req, res) => {
+    db.Dish.update(req.body,{
       where: {
         id:req.body.id
       }
@@ -38,9 +43,10 @@ module.exports = (app) => {
     });
   }
 
-  // delete menu item with specified id
-  app.delete("/api/menu", (req, res) => {
-    Menu.destroy({
+  // delete dishes item with specified id
+  app.delete("/api/dishes", (req, res) => {
+    console.log(req.body);
+    db.Dish.destroy({
       where: {
         id: req.body.id
       }
