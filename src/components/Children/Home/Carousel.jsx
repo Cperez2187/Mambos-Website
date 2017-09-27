@@ -32,7 +32,7 @@ const Carousel = (props) => {
           <img className="d-block img-fluid" src="../../../images/IMG_0418.jpg" alt="Second slide" />
         </div>
         <div className="carousel-item">
-          <img className="d-block img-fluid" src="../../../images/IMG_0416.jpg" alt="Third slide" />
+          <img className="d-block img-fluid" src="../../../images/IMG_2571.jpg" alt="Third slide" />
         </div>
       </div>
 
