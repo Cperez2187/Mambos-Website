@@ -6,17 +6,9 @@
 import React, { Component } from 'react';
 
 // Import Child components
-import NavBar from './Children/NavBar.jsx';
-import Carousel from './Children/Carousel.jsx';
-import AboutUs from './Children/AboutUs.jsx';
-import Menu from './Children/Menu.jsx';
-import Social from './Children/Social.jsx';
-import Reviews from './Children/Reviews.jsx';
-import Contact from './Children/Contact.jsx';
+import Home from './Children/Home.jsx'
+import Admin from './Children/Admin.jsx';
 import Footer from './Children/Footer.jsx';
-
-// Used for 'sticky' Nav bar
-import stickybits from 'stickybits';
 
 // ***** Might change this to Stateless *****
 export default class Main extends Component {
@@ -33,12 +25,10 @@ export default class Main extends Component {
     return (
       <div className="container-fluid nopadding">
         {/* Write code here */}
-        <Carousel />
-        <NavBar />
-        <AboutUs />
-        <Social />
-        <Reviews />
-        <Contact />
+        <Switch>
+          <Route path="/" component={ Home } />
+          <Route path="/admin" component={ Admin } />
+        </Switch>
         <Footer />
       </div>
     );
