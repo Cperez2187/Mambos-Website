@@ -29,7 +29,7 @@ const  NavBar = (props) => {
               <a className="nav-link js-scroll-trigger" href="#section-social">Social</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link js-scroll-trigger" href="#section-contact">Contact</a>
+              <a className="nav-link js-scroll-trigger" href="#section-contact">Contactt</a>
             </li>
           </ul>
         </div>
