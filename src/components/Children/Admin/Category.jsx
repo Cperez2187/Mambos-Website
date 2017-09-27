@@ -5,9 +5,9 @@
 |--------------------------------------------------
 */
 
-import React from 'react';
+import React, { Component } from 'react';
 import Dish from './Dish.jsx';
-import helpers from '../utils/helpers'
+import helpers from '../../utils/helpers'
 
 export default class Category extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ export default class Category extends Component {
     };
   }
 
-  componentWillRender() {
+  componentWillMount() {
     // TODO run AJAX request to get dishes with specified state.category and populate state.dishes with query result
   }
 
@@ -31,6 +31,7 @@ export default class Category extends Component {
     return (
       <div className="admin-category">
       {/*Write code here */}
+        <h2 className="category-name text-center">{this.state.category}</h2>
         <Dish />
       </div>
     );

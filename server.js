@@ -21,10 +21,7 @@ app.use(express.static("public"));
 // Initialize Sequelize
 const db = require('./models');
 // const Sequelize = require('sequelize');
-
-// MongoDB Configuration configuration 
-
-
+ 
 // -----------------------------------------------
 // require routes
 require('./routes/routes.js')(app);

@@ -63,6 +63,10 @@ a:hover, a:focus {
     background-size: cover;
 }
 
+.category-name {
+    text-transform: capitalize;
+}
+
 /* Turn off parallax scrolling for tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1024px) {
     .parallax {
