@@ -28,6 +28,7 @@ const db = require('./models');
 // -----------------------------------------------
 // require routes
 require('./routes/routes.js')(app);
+require('./routes/login-routes.js')(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
