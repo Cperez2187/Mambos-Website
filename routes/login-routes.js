@@ -29,9 +29,9 @@ module.exports = function(app) {
                 password: passwordHash, // Store hash in database
                 admin: req.body.admin
             }).then(function(data) {
-                res.redirect('/');
+                res.redirect('/admin');
                 console.log(data);
-                console.log('SUCCESSSSSS');
+                // console.log('SUCCESSSSSS');
             });
         });
 

@@ -6,7 +6,10 @@
 */
 
 import React, { Component } from 'react'; 
-import Router, { Link } from "react-router";
+import { Link, withRouter }from "react-router-dom";
+import Category from './Admin/Category.jsx';
+
+import Login from './Login.jsx';
 
 export default class Admin extends Component {
   constructor(props) {
@@ -14,16 +17,13 @@ export default class Admin extends Component {
 
     this.state = { };
   }
+
   render() {
     return (
     	<div className="admin" id="admin">
       {/*Write code here */}
-      	<div id="category-tabs">
-      		<Link to="/Child1/GrandChild1"><button className="btn btn-warning btn-sm">Show Grandchild #1</button></Link>
-          <Link to="/Child1/GrandChild2"><button className="btn btn-success btn-sm">Show Grandchild #2</button></Link>
-      	</div>
-
-
+      	<h1 className="text-center">Admin Portal </h1>
+        <Login />
       	<Category category="appetizer" />
       </div>
     );
