@@ -12,6 +12,10 @@ const Carousel = (props) => {
 
     <div id="carouselExampleIndicators" className="carousel slide row" data-ride="carousel">
 
+      <div id="sticky-logo">
+        <img src= "../../../images/small.png" />
+      </div>
+
       {/* Indicators */}
       <ol className="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
