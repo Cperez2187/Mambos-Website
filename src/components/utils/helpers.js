@@ -10,7 +10,7 @@ const helpers = {
         }).then((response) => {
             return response.data.data;
         });
-    }
+    },
 
     // get all dishes
     getDishes: function() {
