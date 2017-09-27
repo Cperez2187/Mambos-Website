@@ -27,8 +27,13 @@
   "homepage": "https://github.com/Cperez2187/Mambos-Website#readme",
   "dependencies": {
     "axios": "^0.16.2",
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.17.2",
+    "connect-session-sequelize": "^4.1.0",
+    "cookie-parser": "^1.4.3",
     "express": "^4.15.4",
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.9",
     "morgan": "^1.8.2",
     "mysql2": "^1.4.2",
     "passport": "^0.4.0",

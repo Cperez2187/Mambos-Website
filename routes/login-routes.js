@@ -40,7 +40,8 @@ module.exports = function(app) {
                 if (validPassword) {
                     console.log('UserID: ' + employee.id);
                     req.login(employee.id, (err) => {
-                        res.redirect('/time-management');
+                        console.log('SUCCESS!');
+                        res.redirect('#section-about');
                     });
                 } else {
                     console.log('Password does not match');
