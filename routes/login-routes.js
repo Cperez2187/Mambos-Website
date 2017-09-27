@@ -14,7 +14,32 @@ const db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
+    // POST route to add an Admin to the 'Admin' table
+    app.post('/api/add-admin', function(req, res) {
+        
+        // Store password entered
+        const passwordEntered = req.body.password;
+        // Create salt rounds, used to generate salt for 'bcrypt'
+        const saltRounds = 10;
+        // Generate a salt and a hash for password, using 'bcrypt'
+        bcrypt.hash(passwordEntered, saltRounds).then(passwordHash => {
+            // Create and add new employee to database
+            db.Admin.create({
+                username: req.body.username,
+                password: passwordHash, // Store hash in database
+                admin: req.body.admin
+            }).then(function(data) {
+                res.redirect('/');
+                console.log(data);
+                console.log('SUCCESSSSSS');
+            });
+        });
+
+    });
+
+    // POST route to validate username and password
     app.post('/api/login', function(req, res) {
+
         // Store username and password that user entered
         const usernameEntered = req.body.username;
         const passwordEntered = req.body.password;
@@ -40,8 +65,8 @@ module.exports = function(app) {
                 if (validPassword) {
                     console.log('UserID: ' + employee.id);
                     req.login(employee.id, (err) => {
-                        console.log('SUCCESS!');
-                        res.redirect('#section-about');
+                        console.log('Password is valid! Open Sesame...');
+                        res.redirect('/');
                     });
                 } else {
                     console.log('Password does not match');
@@ -52,9 +77,11 @@ module.exports = function(app) {
 
     });
 
+    // GET route to display 
     app.get('/api/login', function(req, res) {
         db.Admin.findAll({}).then(function(Employee) {
             res.json(Employee);
+            // res.redirect('#section-about');
         });
     });
 
