@@ -5,9 +5,9 @@
 |--------------------------------------------------
 */
 
-import React from 'react';
+import React, { Component } from 'react';
 import Dish from './Dish.jsx';
-import helpers from '../utils/helpers'
+import helpers from '../../utils/helpers'
 
 export default class Category extends Component {
   constructor(props) {
