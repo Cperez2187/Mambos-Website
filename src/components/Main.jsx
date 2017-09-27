@@ -11,7 +11,6 @@ import Home from './Children/Home.jsx'
 import Admin from './Children/Admin.jsx';
 import Footer from './Children/Footer.jsx';
 
-
 import stickybits from 'stickybits';
 
 // ***** Might change this to Stateless *****
@@ -32,6 +31,7 @@ export default class Main extends Component {
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route path="/admin" component={ Admin } />
+          <Route component={ Home } />
         </Switch>
         <Footer />
       </div>

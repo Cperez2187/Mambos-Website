@@ -1,18 +1,14 @@
 const db = require('../models');
+const path = require('path');
 
 module.exports = (app) => {
-
-  // Main "/" Route. This will redirect the user to our rendered React application
-  app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
-  });
 
   // retrieve all dishes of specified category (i.e. appetizers)
   app.get("/api/dishes", (req, res) => {
     if(req.body.category) { // find dishes by category
       db.Dish.findAll({
         where: {
-          category: req.body.category
+          category: req.body.category // category: ["appetizer","drink","sides"]
         }
       }).then((result) => {
         res.send(result); 
@@ -53,6 +49,11 @@ module.exports = (app) => {
     }).then((result) => {
       res.send(result); 
     });
+  });
+
+  // Main "/" Route. This will redirect the user to our rendered React application
+  app.get("/*", (req, res) => {
+    res.sendFile(path.resolve(__dirname + "/../public/index.html"));
   });
 
 };

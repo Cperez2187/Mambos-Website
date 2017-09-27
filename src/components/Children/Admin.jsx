@@ -20,6 +20,7 @@ export default class Admin extends Component {
     return (
     	<div className="admin" id="admin">
       {/*Write code here */}
+      	<h1 className="text-center">Admin Portal </h1>
       	<Category category="appetizer" />
       </div>
     );
