@@ -27,7 +27,7 @@ const Carousel = (props) => {
       {/* Images */}
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
-          <img className="d-block img-fluid" src="../../../images/platter.png" alt="First slide" />
+          <img className="d-block img-fluid" src="../../../images/FullSizeRender.jpg" alt="First slide" />
         </div>
         <div className="carousel-item">
           <img className="d-block img-fluid" src="../../../images/food.jpg" alt="Second slide" />
