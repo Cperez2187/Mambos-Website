@@ -7,7 +7,7 @@
 
 import React, { Component } from 'react';
 import ImageRow from './Social/ImageRow.jsx';
-import helpers from ".../utils/helpers";
+import helpers from "../../utils/helpers";
 
 class Social extends Component {
   constructor(props) {

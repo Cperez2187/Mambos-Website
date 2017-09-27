@@ -4,11 +4,15 @@
 |--------------------------------------------------
 */
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 // Import Child components
 import Home from './Children/Home.jsx'
 import Admin from './Children/Admin.jsx';
 import Footer from './Children/Footer.jsx';
+
+
+import stickybits from 'stickybits';
 
 // ***** Might change this to Stateless *****
 export default class Main extends Component {
@@ -26,7 +30,7 @@ export default class Main extends Component {
       <div className="container-fluid nopadding">
         {/* Write code here */}
         <Switch>
-          <Route path="/" component={ Home } />
+          <Route exact path="/" component={ Home } />
           <Route path="/admin" component={ Admin } />
         </Switch>
         <Footer />
