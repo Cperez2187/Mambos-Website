@@ -33,14 +33,6 @@ module.exports = function(sequelize, DataTypes) {
 
     }); 
 
-    // Schedule.associate = function(models) {
-    //     Schedule.belongsTo(models.Employees, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     });
-    // };
-
     return Dish;
 };
 
