@@ -24,7 +24,7 @@ module.exports = function(app) {
         // Query to find username in database
         db.Admin.findOne({
             where: {
-                username: usernameEntered
+                username: usernameEntered,
             }
         }).then(employee => {
             console.log('Employee: ' + employee);
