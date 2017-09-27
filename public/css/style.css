@@ -45,6 +45,9 @@ a:focus {
     ;
 }
 
+
+/* CAROUSEL */
+
 #carouselExampleIndicators {
     height: 90vh;
     /* background-image: url('../images/small.png');
@@ -53,7 +56,17 @@ a:focus {
 }
 
 #sticky-logo {
-    position: static;
+    display: flex;
+    justify-content: center;
+}
+
+#sticky-logo>img {
+    position: absolute;
+    z-index: 999;
+    /* display: block;
+    position: absolute;
+    margin: 0 auto; */
+    margin-top: 270px;
 }
 
 
