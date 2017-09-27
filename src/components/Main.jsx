@@ -14,6 +14,7 @@ import Social from './Children/Social.jsx';
 import Reviews from './Children/Reviews.jsx';
 import Contact from './Children/Contact.jsx';
 import Footer from './Children/Footer.jsx';
+import Login from './Children/Login.jsx';
 
 // Used for 'sticky' Nav bar
 import stickybits from 'stickybits';
@@ -40,6 +41,7 @@ export default class Main extends Component {
         <Reviews />
         <Contact />
         <Footer />
+        <Login />
       </div>
     );
   }
