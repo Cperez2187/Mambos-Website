@@ -10,6 +10,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './Children/Home.jsx'
 import Admin from './Children/Admin.jsx';
 import Footer from './Children/Footer.jsx';
+import Login from './Children/Login.jsx';
 
 import stickybits from 'stickybits';
 
