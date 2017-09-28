@@ -31,7 +31,7 @@ export default class Admin extends Component {
       	<div className="admin" id="admin">
         {/*Write code here */}
         	<h1 className="text-center">Admin Portal </h1>
-          <Form />
+          <Form category={this.state.category}/>
         	<h1 className="text-center display-3">Admin Portal </h1>
           <div className="tabs text-center">
             <div className="btn-group" data-toggle="buttons">

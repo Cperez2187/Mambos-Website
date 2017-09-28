@@ -39,19 +39,27 @@ export default class Form extends Component {
         <form>
           
           <div>
-            <Tab category={this.state.category} />
+            <Tab category />
           </div>
 
           <div className="row">
               <div className="col-md-3">
               <div className="dropdown">
-              <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown button
+              <button className="btn btn-secondary dropdown-toggle" 
+              type="button" id="dropdownMenuButton" 
+              data-toggle="dropdown" 
+              aria-haspopup="true" 
+              aria-expanded="false">
+                {this.state.category}
               </button>
               <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a className="dropdown-item" href="#">Action</a>
-                <a className="dropdown-item" href="#">Another action</a>
-                <a className="dropdown-item" href="#">Something else here</a>
+
+                {/* populate categories here */}
+                {}
+
+                <a className="dropdown-item" href="#">Populate Categories</a>
+
+                }
               </div>
             </div>
           </div>
