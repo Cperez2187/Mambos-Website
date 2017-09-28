@@ -69,6 +69,7 @@ module.exports = function(app) {
                         res.redirect('/admin');
                     });
                 } else {
+                    // alert("Fail");
                     console.log('Password does not match');
                     res.redirect('/login');
                 }
