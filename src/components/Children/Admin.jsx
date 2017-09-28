@@ -37,7 +37,7 @@ render() {
           {/*Write code here */}
           
             <h1 className="text-center">Admin Portal </h1>
-            <Form category={this.state.category}/>
+              <Form category={this.state.categories} />
             <h1 className="text-center display-3">Admin Portal </h1>
             <div className="tabs text-center">
               <div className="btn-group" data-toggle="buttons">
@@ -51,6 +51,7 @@ render() {
               </div>
             </div>
             <Category category={this.state.category} />
+            
           </div>
         </div>
       </div>

@@ -9,11 +9,11 @@ export default class Form extends Component {
     super(props);
 
     this.state = { 
+      categories: ["appetizer","salad","soup","beef","chicken","pork","seafood"],
       category: props.category,
       dishes: [],
     };
   }
-  
 
   // TODO change all of this (code from previous exercise in class)
   // When a user submits...
@@ -27,6 +27,10 @@ export default class Form extends Component {
     this.setState({ term: "" });
   }
 
+  setCategory(category) {
+    this.setState({category: category});
+  }
+
   // TODO change form to add new dish
   // Here we describe this component's render method
   render() {
@@ -38,13 +42,21 @@ export default class Form extends Component {
 
         <form>
           <div>
-            <Tab category />
+          {
+            this.state.categories.map((category) => {
+              return (
+                <Tab category={category} key={category} setCategory={this.setCategory.bind(this)}/>
+              ); 
+            })
+          }
+          <Tab category={this.props.categories} />
           </div>
           <div className="row">
             <div className="col-md-3">
               <div className="dropdown">
                 <button className="btn btn-secondary dropdown-toggle" 
-                type="button" id="dropdownMenuButton" 
+                type="button" 
+                id="dropdownMenuButton" 
                 data-toggle="dropdown" 
                 aria-haspopup="true" 
                 aria-expanded="false">
@@ -53,9 +65,11 @@ export default class Form extends Component {
               <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
                 {/* populate categories here */}
-                {}
+                {
 
-                <a className="dropdown-item" href="#">Populate Categories</a>
+                }
+
+                <a className="dropdown-item" href="#">Populate Categories Here</a>
 
               </div>
             </div>
@@ -65,47 +79,45 @@ export default class Form extends Component {
           </div>
             <div className="row">
               <div className="col-md-4 mb-3">
-                <label for="validationDefault01">Item Name</label>
+                <label htmlFor="validationDefault01">Item Name</label>
                 <input type="text" className="form-control" id="validationDefault01" value="" required />
               </div>
             </div>
             <div className="row">
               <div className="col-md-8 mb-3">
-                <label for="validationDefault02">Description</label>
+                <label htmlFor="validationDefault02">Description</label>
                 <input type="text" className="form-control" id="validationDefault02" value="" required />
               </div>
             </div>
             <div className="row">
               <div className="col-md-3 mb-3">
-                <label for="validationDefault03">Price</label>
+                <label htmlFor="validationDefault03">Price</label>
                 <input type="text" className="form-control" id="validationDefault03" required />
                 <div className="invalid-feedback">
                   Please provide a valid city.
                 </div>
               </div>
               <div className="col-md-3 mb-3">
-                <label for="validationDefault04">Category</label>
+                <label htmlFor="validationDefault04">Category</label>
                 <input type="text" className="form-control" id="validationDefault04" required />
                 <div className="invalid-feedback">
                   Please provide a valid state.
                 </div>
               </div>
               <div className="col-md-3 mb-3">
-                <label for="validationDefault05">Last Edited By</label>
+                <label htmlFor="validationDefault05">Last Edited By</label>
                 <div className="card card-inverse">Enter Admin Name here</div>
                 <div className="invalid-feedback">
                   Please provide a valid zip.
                 </div>
               </div>
               <div className="col-md-3 mb-3">
-                <label for="validationDefault05">Date Edited</label>
+                <label htmlFor="validationDefault05">Date Edited</label>
                 <div className="card card-inverse">Last Date Edited</div>
                 <div className="invalid-feedback">
                   Please provide a valid zip.
                 </div>
               </div>
-
-
             </div>
 
             <div className='text-center'>
@@ -114,41 +126,6 @@ export default class Form extends Component {
             <br />
 
           </form>
-
-          {/* <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <h4 className=""><strong>Location</strong></h4>
-
-              <input
-                value={this.state.term}
-                type="text"
-                className="form-control text-center"
-                id="term"
-                onChange={this.handleChange}
-                required
-              />
-
-              <h4 className=""><strong>Location</strong></h4>
-
-              <input
-                value={this.state.term}
-                type="text"
-                className="form-control text-center"
-                id="term"
-                onChange={this.handleChange}
-                required
-              />
-
-
-              <br />
-              <button
-                className="btn btn-primary"
-                type="submit"
-              >
-                Submit
-              </button>
-            </div>
-          </form> */}
       </div>
     );
   }
