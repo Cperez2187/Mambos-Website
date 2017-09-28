@@ -39,7 +39,7 @@ const helpers = {
 
     // edit existing dish by id
     updateDish: function(dish, id) {
-      return axios.put("/api/dishes", {dish, id:id});
+      return axios.put("/api/dishes", {dish: dish, id: id});
     },
 
     // delete dish by id

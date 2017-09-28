@@ -30,15 +30,16 @@ module.exports = (app) => {
   });
 
   // update dishes item with specified id
-  app.put("/api/dishes"), (req, res) => {
-    db.Dish.update(req.body,{
+  app.put("/api/dishes", (req, res) => {
+    db.Dish.update(req.body.dish, {
       where: {
         id:req.body.id
       }
     }).then((result) => {
+      console.log(result);
       res.send(result); 
     });
-  }
+  });
 
   // delete dishes item with specified id
   app.delete("/api/dishes", (req, res) => {
