@@ -32,7 +32,13 @@ export default class Category extends Component {
       <div className="admin-category">
       {/*Write code here */}
         <h2 className="category-name text-center">{this.state.category}</h2>
-        <Dish />
+        <Dish dish={
+          {
+            name: "name",
+            description: "description",
+            price: "price"
+          }
+        }/>
       </div>
     );
   }
