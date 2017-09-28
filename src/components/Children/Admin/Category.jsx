@@ -14,8 +14,28 @@ export default class Category extends Component {
     super(props);
 
     this.state = { 
-      category: props.category,
-      dishes: []
+      category: props.routeParams || "appetizer",
+      dishes: [{
+            id:1,
+            name: "name",
+            description: "description",
+            price: "price"
+          },{
+            id:2,
+            name: "name",
+            description: "description",
+            price: "price"
+          },{
+            id:3,
+            name: "name",
+            description: "description",
+            price: "price"
+          },{
+            id:4,
+            name: "name",
+            description: "description",
+            price: "price"
+          }]
     };
   }
 
@@ -32,13 +52,15 @@ export default class Category extends Component {
       <div className="admin-category">
       {/*Write code here */}
         <h2 className="category-name text-center">{this.state.category}</h2>
-        <Dish dish={
-          {
-            name: "name",
-            description: "description",
-            price: "price"
-          }
-        }/>
+        <div className="admin-dishes">
+        {
+          this.state.dishes.map((dish) => {
+            return (
+              <Dish dish={dish} key={dish.id}/>
+              );
+          })
+        }
+        </div>
       </div>
     );
   }

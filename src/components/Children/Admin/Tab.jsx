@@ -5,15 +5,27 @@
 |--------------------------------------------------
 */
 
-import React from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-const Tab = (props) => {
-  return (
-      <button id={"btn btn-lg btn-default tabs-" + props.category}>
-    {/*Write code here */}
-    	{ props.category }
+export default class Tab extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+    	category: props.category 
+    };
+  }
+
+  handleClick() {
+  	this.props.setCategory(this.state.category);
+  }
+
+  render() {
+  	return (
+      <button className="btn btn-secondary btn-lg" id={"tabs-" + this.state.category} onClick={this.handleClick.bind(this)}>
+        <input type="radio" name="category" autoComplete="off" /> { this.state.category}
       </button>
-  );
+  	);
+  }
 }
-
-export default Tab;

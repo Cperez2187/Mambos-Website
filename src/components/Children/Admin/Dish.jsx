@@ -9,12 +9,12 @@ import React from 'react';
 
 const Dish = (props) => {
   return (
-      <section className="admin-dish">
+      <div className="admin-dish col-md-6 d-inline-block">
     {/*Write code here */}
-    		<p>{props.dish.name}</p>
-    		<p>{props.dish.description}</p>
-    		<p>{props.dish.price}</p>
-      </section>
+    		<p>Name: {props.dish.name}</p>
+    		<p>Description: {props.dish.description}</p>
+    		<p>Price: {props.dish.price}</p>
+      </div>
   );
 }
 
