@@ -21,19 +21,21 @@ export default class Admin extends Component {
 
   render() {
     return (
-    	<div className="admin" id="admin">
-      {/*Write code here */}
-      	<h1 className="text-center">Admin Portal </h1>
-        <div className="tabs text-center">
-          {
-            this.state.categories.map(function(category) {
-              return (
-                <Tab category={category} />
-              ); 
-            })
-          }
+      <div className="container">
+      	<div className="admin" id="admin">
+        {/*Write code here */}
+        	<h1 className="text-center">Admin Portal </h1>
+          <div className="tabs text-center">
+            {
+              this.state.categories.map(function(category) {
+                return (
+                  <Tab category={category} />
+                ); 
+              })
+            }
+          </div>
+        	<Category category="appetizer" />
         </div>
-      	<Category category="appetizer" />
       </div>
     );
   }
