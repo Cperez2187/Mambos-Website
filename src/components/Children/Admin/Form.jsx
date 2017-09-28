@@ -59,7 +59,7 @@ export default class Form extends Component {
 
                 <a className="dropdown-item" href="#">Populate Categories</a>
 
-                }
+                
               </div>
             </div>
           </div>
