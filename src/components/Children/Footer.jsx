@@ -23,12 +23,12 @@ const Footer = (props) => {
           <footer>
 
               <ul className="list-inline">
-                <li><a href="/">Home</a></li>
-                <li><a href='#'>About </a></li>
-                <li><a href='#'>Menu</a></li>
-                <li><a href="#">Social </a></li>
-                <li><a href="#">Contact </a></li>
-                <Link to="/admin">Manager Portal</Link>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="#section-about">About </a></li>
+                  <li><a href="#section-menu">Menu</a></li>
+                  <li><a href="#section-social">Social </a></li>
+                  <li><a href="#section-contact">Contact </a></li>
+                  <li><a href="/admin">Manager Portal </a></li>
               </ul>
               <p className="copyright">Catherine Liu, Cesar Perez, Nick Verges © 2017</p>
 

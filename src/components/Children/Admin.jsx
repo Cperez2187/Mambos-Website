@@ -11,6 +11,8 @@ import Category from './Admin/Category.jsx';
 import Tab from './Admin/Tab.jsx';
 import Form from './Admin/Form.jsx';
 
+import Login from './Login.jsx';
+
 export default class Admin extends Component {
   constructor(props) {
     super(props);
@@ -27,6 +29,7 @@ export default class Admin extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
       <div className="container">
       	<div className="admin" id="admin">
         {/*Write code here */}
@@ -46,6 +49,13 @@ export default class Admin extends Component {
           </div>
         	<Category category={this.state.category} />
         </div>
+=======
+    	<div className="admin" id="admin">
+      {/*Write code here */}
+      	<h1 className="text-center">Admin Portal </h1>
+        <Login />
+      	<Category category="appetizer" />
+>>>>>>> 7b17076860735883f51e7f5277f30c728abb2691
       </div>
     );
   }
