@@ -28,7 +28,7 @@ const Footer = (props) => {
                   <li><a href="#section-menu">Menu</a></li>
                   <li><a href="#section-social">Social </a></li>
                   <li><a href="#section-contact">Contact </a></li>
-                  <li><a href="/admin">Manager Portal </a></li>
+                  <li><a href="/login">Manager Portal </a></li>
               </ul>
               <p className="copyright">Catherine Liu, Cesar Perez, Nick Verges © 2017</p>
 

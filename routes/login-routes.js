@@ -57,7 +57,7 @@ module.exports = function(app) {
             // Check if matching username was found in database
             if (employee === null) {
                 console.log(`Could not find username '${usernameEntered}' in database.`);
-                res.redirect('/');
+                res.redirect('/login');
             } else {
                 // Compare password entered to password stored in database, using 'bcrypt'
                 const validPassword = bcrypt.compareSync(passwordEntered, employee.password); // True or False
@@ -66,11 +66,11 @@ module.exports = function(app) {
                     console.log('UserID: ' + employee.id);
                     req.login(employee.id, (err) => {
                         console.log('Password is valid! Open Sesame...');
-                        res.redirect('/');
+                        res.redirect('/admin');
                     });
                 } else {
                     console.log('Password does not match');
-                    res.redirect('/');
+                    res.redirect('/login');
                 }
             }
         });

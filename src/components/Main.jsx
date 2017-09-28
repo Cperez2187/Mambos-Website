@@ -32,6 +32,7 @@ export default class Main extends Component {
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route path="/admin" component={ Admin } />
+          <Route path="/login" component={ Login } />
           <Route component={ Home } />
         </Switch>
         <Footer />
