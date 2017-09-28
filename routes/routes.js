@@ -5,10 +5,11 @@ module.exports = (app) => {
 
   // retrieve all dishes of specified category (i.e. appetizers)
   app.get("/api/dishes", (req, res) => {
-    if(req.body.category) { // find dishes by category
+    console.log(req.query.category);
+    if(req.query.category) { // find dishes by category
       db.Dish.findAll({
         where: {
-          category: req.body.category // category: ["appetizer","drink","sides"]
+          category: req.query.category // category: ["appetizer","drink","sides"]
         }
       }).then((result) => {
         res.send(result); 

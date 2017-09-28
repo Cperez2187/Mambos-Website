@@ -12,20 +12,25 @@ const helpers = {
         });
     },
 
-    // get all dishes
-    getDishes: function() {
-      return axios.get("/api/dishes");
-    },
+    // // get all dishes
+    // getDishes: function() {
+    //   return axios.get("/api/dishes");
+    // },
 
     // get dishes by category
     getDishes: function(category) {
-      return axios.get("/api/dishes", {category:category});
+      console.log('helper: ' + category);
+      return axios.get("/api/dishes", {
+        params: {
+         category: category
+        }
+      });
     },
 
-    // get dishes by category
-    getDishes: function(cat) {
-      return axios.get("/api/dishes", {category:cat});
-    },
+    // // get dishes by category
+    // getDishes: function(cat) {
+    //   return axios.get("/api/dishes", {category:cat});
+    // },
 
     // post dish by passing in dish object
     addDish: function(dish) {
