@@ -13,6 +13,7 @@ export default class Form extends Component {
     };
   }
 
+  // TODO change all of this (code from previous exercise in class)
   // When a user submits...
   handleSubmit: function(event) {
     // prevent the HTML from trying to submit a form if the user hits "Enter" instead of

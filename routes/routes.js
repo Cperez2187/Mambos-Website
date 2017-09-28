@@ -41,7 +41,6 @@ module.exports = (app) => {
 
   // delete dishes item with specified id
   app.delete("/api/dishes", (req, res) => {
-    console.log(req.body);
     db.Dish.destroy({
       where: {
         id: req.body.id
@@ -49,6 +48,12 @@ module.exports = (app) => {
     }).then((result) => {
       res.send(result); 
     });
+  });
+
+  app.delete("/api/categories", (req, res) => {
+    db.Dish.aggregate('category','DISTINCT').then((result) => {
+      res.send(result);
+    })
   });
 
   // Main "/" Route. This will redirect the user to our rendered React application
