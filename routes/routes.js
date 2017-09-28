@@ -50,10 +50,11 @@ module.exports = (app) => {
     });
   });
 
-  app.delete("/api/categories", (req, res) => {
-    db.Dish.aggregate('category','DISTINCT').then((result) => {
-      res.send(result);
-    })
+  app.get("/api/categories", (req, res) => {
+    db.Dish.findAll({})
+      .then((result) => {
+        res.send(result);
+      });
   });
 
   // Main "/" Route. This will redirect the user to our rendered React application
