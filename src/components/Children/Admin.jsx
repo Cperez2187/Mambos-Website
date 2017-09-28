@@ -9,6 +9,7 @@ import React, { Component } from 'react';
 import { Link, withRouter }from "react-router-dom";
 import Category from './Admin/Category.jsx';
 import Tab from './Admin/Tab.jsx';
+import Form from './Admin/Form.jsx';
 
 export default class Admin extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class Admin extends Component {
       	<div className="admin" id="admin">
         {/*Write code here */}
         	<h1 className="text-center">Admin Portal </h1>
+          <Form />
           <div className="tabs text-center">
             {
               this.state.categories.map(function(category) {
