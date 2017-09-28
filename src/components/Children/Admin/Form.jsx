@@ -37,21 +37,19 @@ export default class Form extends Component {
         </div>
 
         <form>
-          
           <div>
             <Tab category />
           </div>
-
           <div className="row">
-              <div className="col-md-3">
+            <div className="col-md-3">
               <div className="dropdown">
-              <button className="btn btn-secondary dropdown-toggle" 
-              type="button" id="dropdownMenuButton" 
-              data-toggle="dropdown" 
-              aria-haspopup="true" 
-              aria-expanded="false">
-                {this.state.category}
-              </button>
+                <button className="btn btn-secondary dropdown-toggle" 
+                type="button" id="dropdownMenuButton" 
+                data-toggle="dropdown" 
+                aria-haspopup="true" 
+                aria-expanded="false">
+                  {this.state.category}
+                </button>
               <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
                 {/* populate categories here */}
@@ -59,7 +57,6 @@ export default class Form extends Component {
 
                 <a className="dropdown-item" href="#">Populate Categories</a>
 
-                
               </div>
             </div>
           </div>
