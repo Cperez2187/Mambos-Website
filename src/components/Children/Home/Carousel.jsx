@@ -10,10 +10,13 @@ import React from 'react';
 const Carousel = (props) => {
   return (
 <div>
-      <div id="sticky-logo">
-        <img src= "../../../images/small.png" />
-      </div>
 
+    {/* Logo */}
+    <div id="sticky-logo">
+      <img src= "../../../images/small.png" />
+    </div>
+
+    {/* Carousel */}
     <div id="carouselExampleIndicators" className="carousel slide row" data-ride="carousel">
 
       {/* Indicators */}
@@ -45,6 +48,7 @@ const Carousel = (props) => {
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="sr-only">Next</span>
       </a>
+
     </div>
 </div>
   );
