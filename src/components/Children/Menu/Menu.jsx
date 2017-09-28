@@ -17,10 +17,12 @@ export default class Menu extends Component {
   }
   render() {
     return (
-      <div>
-      {/*Write code here */}
-        <MenuNav />
-      </div>
+      <section className="section-menu row" id="section-menu">
+        <div>
+        {/*Write code here */}
+          <MenuNav />
+        </div>
+      </section>
     );
   }
 }
