@@ -17,13 +17,27 @@ export default class Menu extends Component {
     this.state = { menu: {} };
   }
   
+  
   componentWillMount() {
     // Get menu from database
-    helpers.getAllDishes().then(menu => {
-      console.log('Menu: ', menu);
-      this.setState({ menu });
-    });
+    this.getMenu();
     
+  }
+  
+  // Retrieves menu from DB and updates the state
+  async getMenu() {
+    
+    const menu = await helpers.getAllDishes();
+    console.log('Menu: ', menu);
+    this.setState({ menu });
+
+  }
+  
+  // Creates new array for specific category from menu
+  formatMenu(menu, category) {
+
+    return menu.filter(dish => dish.category === category); 
+
   }
 
   render() {
