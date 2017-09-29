@@ -11,7 +11,7 @@ export default class Form extends Component {
     super(props);
 
     this.state = { 
-      category: props.category,
+      category: "",
       dishes: [],
       name: "",
       description: "",
@@ -82,8 +82,7 @@ export default class Form extends Component {
           <h3 className="panel-title text-center">Update Query</h3>
         </div>
 
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <div>
+        <div>
           {
             this.props.categories.map((category) => {
               return (
@@ -92,6 +91,9 @@ export default class Form extends Component {
             })
           }
           </div>
+
+        <form onSubmit={this.handleSubmit.bind(this)}>
+
           <div className="row">
             <div className="col-md-3">
               <div className="dropdown">

@@ -38,7 +38,7 @@ var sequelize = new db.Sequelize(
   "", {
       "dialect": "mysql",
       "storage": "./session.mysql"
-  });
+});
 
 var myStore = new SequelizeStore({
   db: sequelize

@@ -59,10 +59,10 @@ module.exports = (app) => {
       });
   });
 
-  // // Main "/" Route. This will redirect the user to our rendered React application
-  app.get("/admin", (req, res) => {
-    res.redirect('/login');
-  });
+  // // // Main "/" Route. This will redirect the user to our rendered React application
+  // app.get("/admin", (req, res) => {
+  //   res.redirect('/login');
+  // });
 
   // Main "/" Route. This will redirect the user to our rendered React application
   app.get("/*", (req, res) => {
