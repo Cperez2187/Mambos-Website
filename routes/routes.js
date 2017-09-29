@@ -5,26 +5,34 @@ module.exports = (app) => {
 
   // retrieve all dishes of specified category (i.e. appetizers)
   app.get("/api/dishes", (req, res) => {
+    console.log('In route');
     if(req.body.category) { // find dishes by category
       db.Dish.findAll({
         where: {
           category: req.body.category // category: ["appetizer","drink","sides"]
         }
-      }).then((result) => {
+      }).then(result => {
         res.send(result); 
+      }).catch(err => {
+        throw err;
       });
     } else { // find all dishes
       db.Dish.findAll()
-        .then((result) => {
+        .then(result => {
+          console.log('result: ', result);
           res.send(result); 
+        }).catch(err => {
+          if (err) throw err;
         });
     }
   });
 
   // insert new dishes item
   app.post("/api/dishes", (req, res) => {
-    db.Dish.create(req.body).then((result) => {
+    db.Dish.create(req.body).then(result => {
       res.send(result); 
+    }).catch(err => {
+      if (err) throw err;
     });
   });
 
@@ -34,8 +42,10 @@ module.exports = (app) => {
       where: {
         id:req.body.id
       }
-    }).then((result) => {
+    }).then(result => {
       res.send(result); 
+    }).catch(err => {
+      if (err) throw err;
     });
   }
 

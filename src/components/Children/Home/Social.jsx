@@ -29,19 +29,19 @@ class Social extends Component {
   		let rowLength = 4;
 
   		for(let i = 0; i < numImages; i += rowLength){
-			let arr = feed.slice(i, i + rowLength);
-			arrs.push(arr);
-		}
+				let arr = feed.slice(i, i + rowLength);
+				arrs.push(arr);
+			}
 
-		this.setState({
-			username: feed[0].user.username,
-			profilePicture: feed[0].user.profile_picture,
-	  		instagram: arrs,
-	  		primaryImage: {
-	  			url: feed[0].link,
-	  			src: feed[0].images.low_resolution.url
-	  		}
-	  	});
+			this.setState({
+				username: feed[0].user.username,
+				profilePicture: feed[0].user.profile_picture,
+					instagram: arrs,
+					primaryImage: {
+						url: feed[0].link,
+						src: feed[0].images.low_resolution.url
+					}
+			});
   	});
   }
 
