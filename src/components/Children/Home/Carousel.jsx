@@ -9,7 +9,14 @@ import React from 'react';
 
 const Carousel = (props) => {
   return (
+<div>
 
+    {/* Logo */}
+    <div id="sticky-logo">
+      <img src= "../../../images/small.png" />
+    </div>
+
+    {/* Carousel */}
     <div id="carouselExampleIndicators" className="carousel slide row" data-ride="carousel">
 
       {/* Indicators */}
@@ -22,13 +29,13 @@ const Carousel = (props) => {
       {/* Images */}
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
-          <img className="d-block img-fluid" src="../../../images/mamboslogo.png" alt="First slide" />
+          <img className="d-block img-fluid" src="../../../images/FullSizeRender.jpg" alt="First slide" />
         </div>
         <div className="carousel-item">
-          <img className="d-block img-fluid" src="../../../images/mamboslogo.png" alt="Second slide" />
+          <img className="d-block img-fluid" src="../../../images/IMG_0418.jpg" alt="Second slide" />
         </div>
         <div className="carousel-item">
-          <img className="d-block img-fluid" src="../../../images/mamboslogo.png" alt="Third slide" />
+          <img className="d-block img-fluid" src="../../../images/IMG_2571.jpg" alt="Third slide" />
         </div>
       </div>
 
@@ -41,7 +48,9 @@ const Carousel = (props) => {
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="sr-only">Next</span>
       </a>
+
     </div>
+</div>
   );
 }
 

@@ -13,19 +13,24 @@ const helpers = {
     },
 
     // get all dishes
-    getDishes: function() {
+    getAllDishes: function() {
       return axios.get("/api/dishes");
     },
 
     // get dishes by category
     getDishes: function(category) {
-      return axios.get("/api/dishes", {category:category});
+      console.log('helper: ' + category);
+      return axios.get("/api/dishes", {
+        params: {
+         category: category
+        }
+      });
     },
 
-    // get dishes by category
-    getDishes: function(cat) {
-      return axios.get("/api/dishes", {category:cat});
-    },
+    // // get dishes by category
+    // getDishes: function(cat) {
+    //   return axios.get("/api/dishes", {category:cat});
+    // },
 
     // post dish by passing in dish object
     addDish: function(dish) {
@@ -34,12 +39,20 @@ const helpers = {
 
     // edit existing dish by id
     updateDish: function(dish, id) {
-      return axios.put("/api/dishes", {dish, id:id});
+      return axios.put("/api/dishes", {dish: dish, id: id});
     },
 
     // delete dish by id
     deleteDish: function(id) {
-      return axios.delete("/api/dishes", {id: id});
+      return axios.delete("/api/dishes", {
+        params: {
+            id: id
+        }
+      });
+    },
+
+    getDistinctCategories: function() {
+        return axios.get("/api/categories");
     }
 }
 

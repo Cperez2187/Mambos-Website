@@ -7,33 +7,34 @@
 
 import React, { Component } from 'react';
 import Dish from './Dish.jsx';
-import helpers from '../../utils/helpers'
 
-export default class Category extends Component {
-  constructor(props) {
-    super(props);
+const Category = (props) => {
 
-    this.state = { 
-      category: props.category,
-      dishes: []
-    };
-  }
-
-  componentWillMount() {
-    // TODO run AJAX request to get dishes with specified state.category and populate state.dishes with query result
-  }
-
-  addDish() {
-    // 
-  }
-
-  render() {
-    return (
-      <div className="admin-category">
-      {/*Write code here */}
-        <h2 className="category-name text-center">{this.state.category}</h2>
-        <Dish />
+  return (
+    <div className="admin-category clearfix">
+    {/*Write code here */}
+      <h2 className="category-name text-center">
+        {props.category} 
+        &nbsp;&nbsp;
+        <button 
+          className="btn btn-primary btn-lg" 
+          type="button"
+          data-toggle="modal"
+          data-target="#form-query"
+          onClick={props.showNewForm}>New Dish
+        </button>
+      </h2>
+      <div className="admin-dishes">
+      {
+        props.dishes.map((dish) => {
+          return (
+            <Dish dish={dish} key={dish.id} deleteDish={props.deleteDish}/>
+          );
+        })
+      }
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default Category;

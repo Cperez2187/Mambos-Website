@@ -1,6 +1,7 @@
-html, body {
-	max-width: 100%;
-	overflow-x: hidden;
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -33,29 +34,59 @@ a:focus {
     text-decoration: none;
 }
 
-a, a:visited {
-	color: #30353B;
+a,
+a:visited {
+    color: #30353B;
 }
 
-a:hover, a:focus {
-	color: #B94847;;
+a:hover,
+a:focus {
+    color: #B94847;
 }
+
+
+/* CAROUSEL */
 
 #carouselExampleIndicators {
     height: 90vh;
+    /* background-image: url('../images/small.png');
+    background-repeat: no-repeat; */
+    position: relative;
 }
+
+#sticky-logo {
+    display: flex;
+    justify-content: center;
+}
+
+#sticky-logo>img {
+    position: absolute;
+    z-index: 999;
+    /* display: block;
+    position: absolute;
+    margin: 0 auto; */
+    margin-top: 150px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-item>img {
+    width: 100%;
+    height: 100%;
+}
+
 
 /* ABOUT */
 
-#section-about, #section-social, #section-contact {
-	background-image: url("../images/concrete_seamless.png");
-	background-repeat: repeat;
+#section-about,
+#section-social,
+#section-contact {
+    background-image: url("../images/concrete_seamless.png");
+    background-repeat: repeat;
 }
 
-.parallax { 
+.parallax {
     /* Set a specific height */
-    height: 500px; 
-
+    height: 500px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -63,13 +94,21 @@ a:hover, a:focus {
     background-size: cover;
 }
 
-.category-name {
-    text-transform: capitalize;
-}
 
 /* Turn off parallax scrolling for tablets and phones. Increase/decrease the pixels if needed */
+
 @media only screen and (max-device-width: 1024px) {
     .parallax {
         background-attachment: scroll;
     }
+}
+
+
+/* Query Form */
+
+#form-query {
+    border-style: groove;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 25px
 }
