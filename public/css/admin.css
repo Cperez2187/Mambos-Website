@@ -1,0 +1,19 @@
+#admin-header, .admin-tabs, .category-name{
+	padding-bottom:30px;
+}
+
+#admin-header {
+	padding-top:30px;
+}
+
+#admin {
+	min-height: 85vh;
+}
+
+.dish-card {
+	margin-bottom: 30px;
+}
+
+.category-name, .category-tab{
+    text-transform: capitalize;
+}

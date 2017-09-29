@@ -52,8 +52,9 @@ module.exports = (app) => {
     });
   });
 
+  // gets all distinct categories
   app.get("/api/categories", (req, res) => {
-    db.Dish.findAll({})
+    db.Dish.findAll({attributes: ["category"],group:"category"})
       .then((result) => {
         res.send(result);
       });

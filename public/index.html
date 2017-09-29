@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./css/reviews.css">
     <link rel="stylesheet" href="./css/social.css">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/admin.css">
 
     <title>Mambo's Dominican Kitchen</title>
 
@@ -43,6 +44,38 @@
 
     <!-- All of our JS code will be transpiled into this bundle.js file -->
     <script src="bundle.js"></script>
+    <script type="text/javascript">
+        // event listener for form modal
+        $('#form-query').on('show.bs.modal', function (event) {
+          console.log("Show Modal");
+          var button = $(event.relatedTarget) // Button that triggered the modal
+          console.log("Form event:", button);
+          var dish = {
+            id: button.data('id'),
+            name: button.data('name'),
+            description: button.data('description'),
+            price: button.data('price'),
+            category: button.data('category'),
+          }
+          var modal = $(this)
+
+          if(dish.id){
+            modal.find('.modal-title').text("Edit Dish");
+            modal.find('#form-name').val(dish.name);
+            modal.find('#form-description').val(dish.description);
+            modal.find('#form-price').val(dish.price);
+            modal.find('#form-category').val(dish.category);
+            modal.find('#form-name').change();
+            modal.find('#form-description').change();
+            modal.find('#form-price').change();
+            modal.find('#form-category').change();
+          }
+          else{
+            modal.find('.modal-title').text("New Dish");
+          }
+          
+        });
+    </script>
 </body>
 
 </html>

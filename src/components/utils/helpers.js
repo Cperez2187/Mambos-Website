@@ -12,10 +12,10 @@ const helpers = {
         });
     },
 
-    // // get all dishes
-    // getDishes: function() {
-    //   return axios.get("/api/dishes");
-    // },
+    // get all dishes
+    getAllDishes: function() {
+      return axios.get("/api/dishes");
+    },
 
     // get dishes by category
     getDishes: function(category) {
@@ -44,7 +44,15 @@ const helpers = {
 
     // delete dish by id
     deleteDish: function(id) {
-      return axios.delete("/api/dishes", {id: id});
+      return axios.delete("/api/dishes", {
+        params: {
+            id: id
+        }
+      });
+    },
+
+    getDistinctCategories: function() {
+        return axios.get("/api/categories");
     }
 }
 

@@ -23,7 +23,7 @@ export default class Tab extends Component {
 
   render() {
   	return (
-      <button className="btn btn-secondary btn-lg" id={"tabs-" + this.state.category} onClick={this.handleClick.bind(this)}>
+      <button className="btn btn-secondary btn-lg category-tab" id={"tabs-" + this.state.category} onClick={this.handleClick.bind(this)}>
         <input type="radio" name="category" autoComplete="off" /> { this.state.category}
       </button>
   	);
