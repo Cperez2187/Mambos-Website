@@ -42,11 +42,36 @@ a:visited {
 a:hover,
 a:focus {
     color: #B94847;
-    ;
 }
+
+
+/* CAROUSEL */
 
 #carouselExampleIndicators {
     height: 90vh;
+    /* background-image: url('../images/small.png');
+    background-repeat: no-repeat; */
+    position: relative;
+}
+
+#sticky-logo {
+    display: flex;
+    justify-content: center;
+}
+
+#sticky-logo>img {
+    position: absolute;
+    z-index: 999;
+    /* display: block;
+    position: absolute;
+    margin: 0 auto; */
+    margin-top: 150px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-item>img {
+    width: 100%;
+    height: 100%;
 }
 
 
