@@ -16,6 +16,31 @@ export default class Admin extends Component {
   constructor(props) {
     super(props);
     this.menu = helpers.getDishes();
+
+    this.dishes = [
+      {
+        name:"name",
+        description: "description",
+        price: "price"
+      },{
+        name:"name",
+        description: "description",
+        price: "price"
+      },{
+        name:"name",
+        description: "description",
+        price: "price"
+      },{
+        name:"name",
+        description: "description",
+        price: "price"
+      },{
+        name:"name",
+        description: "description",
+        price: "price"
+      }
+    ];
+
     this.state = {
       categories: ["appetizer","salad","soup","beef","chicken","pork","seafood"],
       category: "appetizer"
@@ -25,7 +50,7 @@ export default class Admin extends Component {
   setCategory(category) {
     this.setState({category: category});
   }
-
+  
   render() {
     return (
       <div className="container">
@@ -45,7 +70,7 @@ export default class Admin extends Component {
             }
             </div>
           </div>
-        	<Category category={this.state.category} />
+        	<Category category={this.state.category} dishes={this.dishes} />
         </div>
       </div>
     );

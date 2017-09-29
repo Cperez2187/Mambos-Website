@@ -7,8 +7,8 @@
 
 import React, { Component } from 'react';
 import Dish from './Dish.jsx';
-import helpers from '../../utils/helpers'
 
+<<<<<<< Updated upstream
 export default class Category extends Component {
 
   render() {
@@ -25,7 +25,25 @@ export default class Category extends Component {
           })
         }
         </div>
+=======
+const Category = (props) => {
+
+  return (
+    <div className="admin-category">
+    {/*Write code here */}
+      <h2 className="category-name text-center">{props.category}</h2>
+      <div className="admin-dishes">
+      {
+        props.dishes.map((dish) => {
+          return (
+            <Dish dish={dish} key={dish.id}/>
+          );
+        })
+      }
+>>>>>>> Stashed changes
       </div>
-    );
-  }
+    </div>
+  );
 }
+
+export default Category;
