@@ -23,7 +23,7 @@ const db = require('./models');
 // const Sequelize = require('sequelize');
 
 // Static directory
-app.use('/index', express.static("public"));
+app.use('/static', express.static("public"));
 
 // Run Morgan for Logging
 app.use(logger("dev"));
