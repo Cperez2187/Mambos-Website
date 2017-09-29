@@ -32,13 +32,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-  var sequelize = new db.Sequelize(
-    "Mambos",
-    "root",
-    "", {
-        "dialect": "mysql",
-        "storage": "./session.mysql"
-  });
+var sequelize = new db.Sequelize(
+  "Mambos",
+  "root",
+  "", {
+      "dialect": "mysql",
+      "storage": "./session.mysql"
+});
 
 var myStore = new SequelizeStore({
   db: sequelize
