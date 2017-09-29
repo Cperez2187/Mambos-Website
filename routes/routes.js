@@ -45,7 +45,7 @@ module.exports = (app) => {
   app.delete("/api/dishes", (req, res) => {
     db.Dish.destroy({
       where: {
-        id: req.body.id
+        id: req.query.id
       }
     }).then((result) => {
       res.send(result); 

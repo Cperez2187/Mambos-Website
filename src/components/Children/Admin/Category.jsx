@@ -9,10 +9,14 @@ import React, { Component } from 'react';
 import Dish from './Dish.jsx';
 
 const Category = (props) => {
+  const handleAdd = (event) => {
+    props.setUpdatedDish({});
+  }
 
   return (
     <div className="admin-category clearfix">
     {/*Write code here */}
+
       <h2 className="category-name text-center">
         {props.category} 
         &nbsp;&nbsp;
@@ -21,14 +25,16 @@ const Category = (props) => {
           type="button"
           data-toggle="modal"
           data-target="#form-query"
-          onClick={props.showNewForm}>New Dish
+          onClick={handleAdd}
+          >
+          New Dish
         </button>
       </h2>
       <div className="admin-dishes">
       {
         props.dishes.map((dish) => {
           return (
-            <Dish dish={dish} key={dish.id} deleteDish={props.deleteDish}/>
+            <Dish dish={dish} key={dish.id} setUpdatedDish={props.setUpdatedDish} deleteDish={props.deleteDish}/>
           );
         })
       }
