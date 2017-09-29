@@ -9,11 +9,12 @@ import React, { Component } from 'react';
 import { Route }from "react-router-dom";
 import Category from './Admin/Category.jsx';
 import Tab from './Admin/Tab.jsx';
+import helpers from '../../utils/helpers.jsx'
 
 export default class Admin extends Component {
   constructor(props) {
     super(props);
-
+    this.menu = helpers.getDishes();
     this.state = {
       categories: ["appetizer","salad","soup","beef","chicken","pork","seafood"],
       category: "appetizer"
@@ -35,7 +36,7 @@ export default class Admin extends Component {
             {
               this.state.categories.map((category) => {
                 return (
-                  <Tab category={category} key={category} setCategory={this.setCategory.bind(this)}/>
+                  <Tab dishes={} key={category} setCategory={this.setCategory.bind(this)}/>
                 ); 
               })
             }
