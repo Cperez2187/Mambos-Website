@@ -38,7 +38,7 @@ var sequelize = new db.Sequelize(
   "", {
       "dialect": "mysql",
       "storage": "./session.mysql"
-  });
+});
 
 var myStore = new SequelizeStore({
   db: sequelize
@@ -46,18 +46,20 @@ var myStore = new SequelizeStore({
 
 app.use(cookieParser());  // Possibly not needed for session
 app.use(session({
+  // path: '/admin', httpOnly: true, secure: false, 
+  cookie:  { maxAge: 5000 },  
   // key: 'session_cookie_name',
   secret: 'uefewehfybjboi', // could use random string generator
   // store: myStore,
-  resave: false,
-  saveUninitialized: false, // Only creates cookie for logged in user
+  resave: true,
+  saveUninitialized: true, // Only creates cookie for logged in user
   // cookie: { secure: true}  // Only use if using HTTPS
 }));
+app.use(passport.initialize());
+// app.use(passport.session());
 
 myStore.sync();
 
-app.use(passport.initialize());
-app.use(passport.session());
 
 // Override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));

@@ -59,15 +59,20 @@ module.exports = (app) => {
       });
   });
 
-  // // Main "/" Route. This will redirect the user to our rendered React application
-  app.get("/admin", (req, res) => {
-    res.redirect('/login');
+  // // // Main "/" Route. This will redirect the user to our rendered React application
+  app.get("/admin", (req, res, next) => {
+    // console.log(req.session.cookie.maxAge, new Date().getTime());
+      if (req.session.cookie.maxAge > 0) {
+        console.log('alksfasfdkldsafjksdfkal');
+        next();
+      } else {
+      res.redirect('/login');
+    };
   });
 
   // Main "/" Route. This will redirect the user to our rendered React application
   app.get("/*", (req, res) => {
     res.sendFile(path.resolve(__dirname + "/../public/index.html"));
   });
-
 
 };

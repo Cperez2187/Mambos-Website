@@ -64,6 +64,7 @@ module.exports = function(app) {
 
                 if (validPassword) {
                     console.log('UserID: ' + employee.id);
+                    req.session.cookie = { maxAge: 5000 };
                     req.login(employee.id, (err) => {
                         console.log('Password is valid! Open Sesame...');
                         res.redirect('/admin');
