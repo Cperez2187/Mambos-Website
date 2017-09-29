@@ -18,6 +18,6 @@
         "password": "zou5oggweqlpo4h8",
         "database": "wg6a1o32a86xoz0o",
         "host": "ffn96u87j5ogvehy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        "dialect": "mysql"
+        "dialect": "mysql2"
     }
 }
