@@ -32,10 +32,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-if(process.env.JAWSDB_URL) {
-  //Heroku deployment
-    connection = mysql.createConnection(process.env.production);
-} else {
   var sequelize = new db.Sequelize(
     "Mambos",
     "root",
@@ -43,9 +39,6 @@ if(process.env.JAWSDB_URL) {
         "dialect": "mysql",
         "storage": "./session.mysql"
   });
-};
-
-
 
 var myStore = new SequelizeStore({
   db: sequelize
