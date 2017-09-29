@@ -15,6 +15,7 @@ const Category = (props) => {
     {/*Write code here */}
       <h2 className="category-name text-center">
         {props.category} 
+        &nbsp;&nbsp;
         <button 
           className="btn btn-primary btn-lg" 
           type="button"
