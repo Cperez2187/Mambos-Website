@@ -13,13 +13,9 @@
     /*background:#999;*/
 }
 
-
-/* This should work to display footer links horizontally.... ?  */
-
-
-/* .list-inline li {
-    display: block;
-} */
+.list-inline li {
+    display: inline;
+}
 
 .footer-basic ul {
     padding: 0;

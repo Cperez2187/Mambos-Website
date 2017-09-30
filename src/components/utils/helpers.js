@@ -23,8 +23,13 @@ const helpers = {
   },
 
   // get dishes by category
-  getDishes(category) {
-    return axios.get("/api/dishes", { category }).then(result => {
+  getDishes: function(category) {
+    console.log('helper: ' + category);
+    return axios.get("/api/dishes", {
+      params: {
+       category: category
+      }
+    }).then(result => {
       console.log('Dish category: ', result.data);
       return result.data;
     }).catch(err => {
@@ -52,12 +57,20 @@ const helpers = {
 
   // delete dish by id
   deleteDish: function(id) {
-    return axios.delete("/api/dishes", { id }).then(result => {
+    return axios.delete("/api/dishes", {
+      params: {
+          id: id
+      }
+    }).then(result => {
       console.log('Deleted: ', results);
     }).catch(err => {
       throw err;
     });
   }
+
+    getDistinctCategories: function() {
+        return axios.get("/api/categories");
+    }
 }
 
 export default helpers;

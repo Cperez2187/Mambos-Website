@@ -1,5 +1,8 @@
 // Include React
 import React, { Component } from 'react';
+import Tab from './Tab.jsx';
+
+import helpers from '../../utils/helpers.js';
 
 // Creating the Form component
 export default class Form extends Component { 
@@ -8,59 +11,110 @@ export default class Form extends Component {
     super(props);
 
     this.state = { 
-      category: props.category,
-      dishes: []
+      category: "",
+      name: "",
+      description: "",
+      price: "",
+      id: ""
     };
   }
 
   // When a user submits...
-  handleSubmit: function(event) {
+  handleSubmit(event) {
     // prevent the HTML from trying to submit a form if the user hits "Enter" instead of
     // clicking the button
     event.preventDefault();
+    // even.stopPropogation();
 
-    // Set the parent to have the search term
-    this.props.setTerm(this.state.term);
-    this.setState({ term: "" });
+    let updates = {
+        name: this.state.name,
+        description: this.state.description,
+        price: this.state.price,
+        category: this.state.category
+    }
+
+    helpers.updateDish(updates, this.state.id).then(response => {
+        console.log(response);
+        if(response.status === 200) {
+          alert('GOOD TO GO');
+        }
+      console.log('DISH UPDATED');
+    })
   }
 
-  // TODO change form to add new dish
-  // Here we describe this component's render method
-  render: function() {
-    return (
-      <div className="panel panel-default">
-        <div className="panel-heading">
-          <h3 className="panel-title text-center">Query</h3>
-        </div>
-        <div className="panel-body text-center">
-          <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <h4 className="">
-                <strong>Location</strong>
-              </h4>
+  // This function will respond to the user input
+  handleChange (key, event) {
+    this.setState({ [key]: event.target.value });
+  }
 
-              {/*
-                Note how each of the form elements has an id that matches the state.
-                This is not necessary but it is convenient.
-                Also note how each has an onChange event associated with our handleChange event.
-              */}
-              <input
-                value={this.state.term}
-                type="text"
-                className="form-control text-center"
-                id="term"
-                onChange={this.handleChange}
-                required
-              />
-              <br />
-              <button
-                className="btn btn-primary"
-                type="submit"
-              >
-                Submit
+  // Here we describe this component's render method
+  render() {
+    return (
+      <div className="modal" id="form-query">
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">{this.state.title || "Title"}</h5>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
               </button>
             </div>
-          </form>
+            <div className="modal-body">
+              <form onSubmit={this.handleSubmit.bind(this)}>
+                <div className="row">
+                  <div className="col-md-12 mb-3">
+                    <label htmlFor="validationDefault01">Item Name</label>
+                    <input type="text" 
+                    className="form-control" 
+                    id="form-name" 
+                    value={this.state.name}
+                    onChange={this.handleChange.bind(this, "name")}
+                    required />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12 mb-3">
+                    <label htmlFor="validationDefault02">Description</label>
+                    <textarea
+                    className="form-control" 
+                    id="form-description" 
+                    value={this.state.description}
+                    onChange={this.handleChange.bind(this, "description")}
+                    required />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12 mb-3">
+                    <label htmlFor="validationDefault03">Price</label>
+                    <input type="text" 
+                    className="form-control" 
+                    id="form-price" 
+                    value={this.state.price}
+                    onChange={this.handleChange.bind(this, "price")}
+                    required />
+                  </div>
+                  <div className="col-md-12 mb-3">
+                    <label htmlFor="validationDefault04">Category</label>
+                    <input type="text" 
+                    className="form-control" 
+                    id="form-category" 
+                    value={this.state.category}
+                    onChange={this.handleChange.bind(this, "category")}
+                    required />
+                  </div>
+                  <input 
+                    type="hidden" 
+                    id="form-id"
+                    value={this.state.id}
+                    onChange={this.handleChange.bind(this, "id")} />
+                </div>
+              </form>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-primary" onClick={this.handleSubmit.bind(this)}>Save changes</button>
+              <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -1,48 +1,54 @@
 {
-  "name": "mambos-website",
-  "version": "1.0.0",
-  "description": "Website for Mambo's Dominican Kitchen",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack & node server",
-    "start": "node server.js",
-    "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Cperez2187/Mambos-Website.git"
-  },
-  "keywords": [
-    "React",
-    "Node",
-    "MySQL",
-    "Express"
-  ],
-  "author": "Cesar Perez, Catherine Liu, Nick Verges",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Cperez2187/Mambos-Website/issues"
-  },
-  "homepage": "https://github.com/Cperez2187/Mambos-Website#readme",
-  "dependencies": {
-    "axios": "^0.16.2",
-    "body-parser": "^1.17.2",
-    "express": "^4.15.4",
-    "morgan": "^1.8.2",
-    "mysql2": "^1.4.2",
-    "passport": "^0.4.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-router-dom": "^4.2.2",
-    "sequelize": "^4.8.4",
-    "stickybits": "^1.5.3"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "webpack": "^3.5.5"
-  }
+    "name": "mambos-website",
+    "version": "1.0.0",
+    "description": "Website for Mambo's Dominican Kitchen",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "dev": "webpack & node server",
+        "prod": "NODE_ENV=production node server.js",
+        "build": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Cperez2187/Mambos-Website.git"
+    },
+    "keywords": [
+        "React",
+        "Node",
+        "MySQL",
+        "Express"
+    ],
+    "author": "Cesar Perez, Catherine Liu, Nick Verges",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Cperez2187/Mambos-Website/issues"
+    },
+    "homepage": "https://github.com/Cperez2187/Mambos-Website#readme",
+    "dependencies": {
+        "axios": "^0.16.2",
+        "bcrypt": "^1.0.3",
+        "body-parser": "^1.17.2",
+        "connect-session-sequelize": "^4.1.0",
+        "cookie-parser": "^1.4.3",
+        "express": "^4.15.4",
+        "express-session": "^1.15.6",
+        "method-override": "^2.3.9",
+        "morgan": "^1.8.2",
+        "mysql2": "^1.4.2",
+        "passport": "^0.4.0",
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
+        "react-router-dom": "^4.2.2",
+        "sequelize": "^4.8.4",
+        "stickybits": "^1.5.3"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "webpack": "^3.5.5"
+    }
 }
