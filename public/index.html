@@ -51,9 +51,11 @@
         $(window).scroll(function() {  
             if ($(window).scrollTop() >= stickyNav) {
                 $('#mainNav').addClass('fixed-top');
+                $('#section-about').css('margin-top','10vh');
             }
             else {
                 $('#mainNav').removeClass('fixed-top');
+                $('#section-about').css('margin-top','0');
             }  
         });
     </script>
