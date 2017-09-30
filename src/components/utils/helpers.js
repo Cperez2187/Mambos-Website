@@ -14,7 +14,9 @@ const helpers = {
 
     // get all dishes
     getAllDishes: function() {
-      return axios.get("/api/dishes");
+      return axios.get("/api/dishes").then((response) => {
+        return response.data;
+      });
     },
 
     // get dishes by category
@@ -34,11 +36,13 @@ const helpers = {
 
     // post dish by passing in dish object
     addDish: function(dish) {
+      console.log(dish);
       return axios.post("/api/dishes", dish);
     },
 
     // edit existing dish by id
     updateDish: function(dish, id) {
+      console.log("Dish",dish,"id",id)
       return axios.put("/api/dishes", {dish: dish, id: id});
     },
 
