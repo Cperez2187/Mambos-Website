@@ -108,7 +108,6 @@ export default class Admin extends Component {
         console.log("Deleted dish id:",id);
       });
     }
-
     this.getMenu();
   }
 
@@ -118,7 +117,7 @@ export default class Admin extends Component {
         <div className="admin" id="admin">
         {/*Write code here */}
           <Form dish={this.state.updatedDish} categories={this.state.categories} saveDish={this.saveDish}/> 
-          <h1 className="text-center display-3" id="admin-header">Admin Portal <button className="float-right btn btn-lg btn-secondary">Logout</button></h1>
+          <h1 className="text-center display-3" id="admin-header">Admin Portal <button className="float-right btn btn-lg btn-secondary"><a href='/'>Logout</a></button></h1>
           <div className="admin-tabs text-center">
             <div className="btn-group" data-toggle="buttons">
             {
