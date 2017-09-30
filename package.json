@@ -5,9 +5,9 @@
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "webpack & node server",
-        "start": "webpack && node server",
-        "build": "webpack"
+        "prod": "webpack & node server",
+        "build-js": "babel src -d lib --presets=es2015,react",
+        "start": "npm run build-js && webpack -p && node server.js"
     },
     "repository": {
         "type": "git",
