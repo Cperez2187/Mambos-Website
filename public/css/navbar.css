@@ -1,15 +1,16 @@
 #mainNav {
-    position: fixed;
-    top: 0;
+    /*position: fixed;*/
+    /*top: 0;*/
     background-color: #b94847;
     z-index: 999;
-    top: -1px !important;
+    /*top: -1px !important;*/
     height: 10vh;
 }
 
 
 /* Link color */
 
-#navbarResponsive>ul>li>a {
+#navbarResponsive>ul>li>a, #homeHeading{
     color: white;
+    text-transform: uppercase;
 }

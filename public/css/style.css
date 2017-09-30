@@ -44,6 +44,18 @@ a:focus {
     color: #B94847;
 }
 
+#about-hours {
+    background-image: url("../images/business-hours.png");
+    background-size: cover;
+    background-position-y: 60%;
+    color: white;
+}
+
+#about-hours > div {
+    height: 100%;
+    padding: 50px;
+}
+
 
 /* CAROUSEL */
 

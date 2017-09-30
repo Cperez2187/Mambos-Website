@@ -25,7 +25,7 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    stickybits('.navbar');
+    // stickybits('.navbar');
   }
 
   render() {

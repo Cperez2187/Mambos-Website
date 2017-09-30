@@ -11,8 +11,85 @@ const AboutUs = (props) => {
   return (
       <section className="section-about row" id="section-about">
     {/*Write code here */}
-        <div className="pull-left col-md-4" id="about-img">
-          <img className="pull-left" src="http://lorempixel.com/g/550/550/" />
+        <div className="pull-left col-md-4" id="about-hours">
+          <div className="translucent-bg">
+            <h2 className="text-center">Business Hours</h2>
+            <div className="row justify-content-center no-gutters">
+              <div className="col-md-4 float-left">
+                <h5>Monday:</h5>
+              </div>
+              <div className="col-md-4 float-left">
+                <h5>Closed</h5>
+              </div>
+            </div>
+            <div className="row justify-content-center no-gutters">
+              <div className="col-md-4 float-left">
+                <h5>Tuesday:</h5>
+              </div>
+              <div className="col-md-4 float-left">
+                <h5>11AM - 9PM</h5>
+              </div>
+            </div>
+            <div className="row justify-content-center no-gutters">
+              <div className="col-md-4 float-left">
+                <h5>Wednesday:</h5>
+              </div>
+              <div className="col-md-4 float-left">
+                <h5>11AM - 9PM</h5>
+              </div>
+            </div>
+            <div className="row justify-content-center no-gutters">
+              <div className="col-md-4 float-left">
+                <h5>Thursday:</h5>
+              </div>
+              <div className="col-md-4 float-left">
+                <h5>11AM - 9PM</h5>
+              </div>
+            </div>
+            <div className="row justify-content-center no-gutters">
+              <div className="col-md-4 float-left">
+                <h5>Friday:</h5>
+              </div>
+              <div className="col-md-4 float-left">
+                <h5>11AM - 10PM</h5>
+              </div>
+            </div>
+            <div className="row justify-content-center no-gutters">
+              <div className="col-md-4 float-left">
+                <h5>Saturday:</h5>
+              </div>
+              <div className="col-md-4 float-left">
+                <h5>11AM - 10PM</h5>
+              </div>
+            </div>
+            <div className="row justify-content-center no-gutters">
+              <div className="col-md-4 float-left">
+                <h5>Sunday:</h5>
+              </div>
+              <div className="col-md-4 float-left">
+                <h5>11AM - 7PM</h5>
+              </div>
+            </div>
+            <br />
+
+            <h2 className="text-center">Happy Hour</h2>
+            <div className="row justify-content-center no-gutters">
+              <div className="col-md-4 float-left">
+                <h5>Tue - Fri:</h5>
+              </div>
+              <div className="col-md-4 float-left">
+                <h5>4PM - 7PM</h5>
+              </div>
+            </div>
+            <div className="row justify-content-center no-gutters">
+              <div className="col-md-4 float-left">
+                <h5>Saturday:</h5>
+              </div>
+              <div className="col-md-4 float-left">
+                <h5>11AM - 3PM</h5>
+              </div>
+            </div>
+          </div>
         </div> 
         <div className="text-div pull-right ml-md-auto mr-md-auto col-md-6" id="about">
         	<h1 className="text-center">About Us</h1>
