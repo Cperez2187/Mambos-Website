@@ -15,7 +15,7 @@ const helpers = {
   // get all dishes
   getAllDishes() {
     return axios.get("/api/dishes").then(result => {
-      // console.log('All dishes: ', result.data);
+      console.log('All dishes: ', result.data);
       return result.data;
     }).catch(err => {
       throw err;
