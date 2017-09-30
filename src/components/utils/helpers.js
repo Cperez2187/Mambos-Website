@@ -14,7 +14,9 @@ const helpers = {
 
     // get all dishes
     getAllDishes: function() {
-      return axios.get("/api/dishes");
+      return axios.get("/api/dishes").then((response) => {
+        return response.data;
+      });
     },
 
     // get dishes by category
