@@ -1,12 +1,13 @@
 #section-reviews {
-	background-image: url("../images/reviews.png");
-	background-size: cover;
+    background-image: url("../images/IMG_0416.png");
+    background-size: cover;
 }
 
-#section-reviews blockquote, #section-reviews h1 {
-	color: white;
+#section-reviews blockquote,
+#section-reviews h1 {
+    color: white;
 }
 
 .translucent-bg {
-	background-color: rgba(50,50,50,.5);
+    background-color: rgba(50, 50, 50, .5);
 }

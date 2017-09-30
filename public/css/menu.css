@@ -1,34 +1,37 @@
 #section-menu {
-	background-image: url("../images/menu.png");
-	background-size: cover;
-	min-height: 70vh;
+    background-image: url("../images/platter.png");
+    background-size: cover;
+    min-height: 70vh;
 }
 
 #menu-nav {
-  /*background-color: #3C5470*/
-  color: white;
-  padding: 30px;
+    /*background-color: #3C5470*/
+    color: white;
+    padding: 30px;
 }
 
-#menu-nav a, #menu-nav a:visited {
-	color: white;
+#menu-nav a,
+#menu-nav a:visited {
+    color: white;
 }
 
-#menu-nav a:focus, #menu-nav a:hover, #menu-nav a.active {
-	color: #BBBBBB;
+#menu-nav a:focus,
+#menu-nav a:hover,
+#menu-nav a.active {
+    color: #BBBBBB;
 }
 
 .menu-category {
-	padding-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 .menu-card {
-	height: 150px;
-	color: white;
-	border: none;
-	background: none;
+    height: 150px;
+    color: white;
+    border: none;
+    background: none;
 }
 
 .display-4 {
-	font-size: 2.5rem;
+    font-size: 2.5rem;
 }

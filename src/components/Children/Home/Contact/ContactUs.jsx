@@ -53,9 +53,9 @@ const ContactUs = () => {
 		    	<div className="row justify-content-around">
 		    		<div className="ml-md-auto col-md-5">
 		    			<p className="">
-		    				<a href="mailto:mambosdominicankitchen@gmail.com">
+		    				<a href="mailto:mambosdkitchen@gmail.com">
 		    					<i className="fa fa-envelope-square fa-3x fa-fw" aria-hidden="true"></i>
-		    					mambosdominicankitchen@gmail.com
+		    					mambosdkitchen@gmail.com
 		    				</a>
 		    			</p>
 		    		</div>
