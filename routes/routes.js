@@ -45,15 +45,16 @@ module.exports = (app) => {
   app.delete("/api/dishes", (req, res) => {
     db.Dish.destroy({
       where: {
-        id: req.body.id
+        id: req.query.id
       }
     }).then((result) => {
       res.send(result); 
     });
   });
 
+  // gets all distinct categories
   app.get("/api/categories", (req, res) => {
-    db.Dish.findAll({})
+    db.Dish.findAll({attributes: ["category"],group:"category"})
       .then((result) => {
         res.send(result);
       });

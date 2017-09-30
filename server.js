@@ -32,17 +32,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-var sequelize = new db.Sequelize(
-  "Mambos",
-  "root",
-  "", {
-      "dialect": "mysql",
-      "storage": "./session.mysql"
-});
+// var sequelize = new db.Sequelize(
+//   "Mambos",
+//   "root",
+//   "", {
+//       "dialect": "mysql",
+//       "storage": "./session.mysql"
+// });
 
-var myStore = new SequelizeStore({
-  db: sequelize
-});
+// var myStore = new SequelizeStore({
+//   db: sequelize
+// });
+
+// myStore.sync();
 
 app.use(cookieParser());  // Possibly not needed for session
 app.use(session({
@@ -54,13 +56,13 @@ app.use(session({
   // cookie: { secure: true}  // Only use if using HTTPS
 }));
 
-myStore.sync();
+
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Override with POST having ?_method=DELETE
-app.use(methodOverride("_method"));
+// // Override with POST having ?_method=DELETE
+// app.use(methodOverride("_method"));
 
 // -----------------------------------------------
 // require routes

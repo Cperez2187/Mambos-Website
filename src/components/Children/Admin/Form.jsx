@@ -12,12 +12,38 @@ export default class Form extends Component {
 
     this.state = { 
       category: "",
-      dishes: [],
       name: "",
       description: "",
       price: "",
-      category: ""
+      id: ""
     };
+
+    console.log(this.state);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps){
+    console.log(nextProps);
+    console.log(this.props);
+    if(Object.keys(nextProps.dish).length === 0) {
+      this.setState({
+        category: "",
+        name: "",
+        description: "",
+        price: "",
+        id: ""
+      })
+    } else if (nextProps.dish !== this.props.dish) {
+      this.setState({ 
+        category: nextProps.dish.category,
+        name: nextProps.dish.name,
+        description: nextProps.dish.description,
+        price: nextProps.dish.price,
+        id:nextProps.dish.id,
+      })
+    }
   }
 
   // When a user submits...
@@ -26,180 +52,99 @@ export default class Form extends Component {
     // clicking the button
     event.preventDefault();
     // even.stopPropogation();
+    $('#form-query').modal("toggle");
 
     let updates = {
         name: this.state.name,
         description: this.state.description,
         price: this.state.price,
-        category: this.state.category
+        category: this.state.category,
+        id: this.state.id
     }
 
-    helpers.updateDish(updates, this.state.id).then(response => {
-        console.log(response);
-        if(response.status === 200) {
-          alert('GOOD TO GO');
-        }
-      console.log('DISH UPDATED');
-    })
+    this.props.saveDish(updates);
   }
 
   // This function will respond to the user input
-  handleChange (key, event) {
-    this.setState({ [key]: event.target.value });
-  }
-  
-  setCategory(category) {
-    this.setState({category: category});
-
-    helpers.getDishes(category).then(response => {
-      console.log(response.data);
-      console.log('----------');
-      this.setState( {dishes: response.data} );
-    });
+  handleChange (event) {
+    this.setState({ [event.target.name]: event.target.value });
   }
 
-  handleClick(index, event) {
-    event.preventDefault();
-
-    console.log(this.state.dishes[index].name);
-    this.setState( 
-      {
-        name: this.state.dishes[index].name,
-        description: this.state.dishes[index].description,
-        price: this.state.dishes[index].price,
-        category: this.state.dishes[index].category,
-        id: this.state.dishes[index].id
-      } 
-    );
-  }
-
-  // TODO change form to add new dish
   // Here we describe this component's render method
   render() {
     return (
-      <div className="panel panel-default" id="form-query">
-        <div className="panel-heading" id="form-query-inner">
-          <h3 className="panel-title text-center">Update Query</h3>
+      <div className="modal" id="form-query">
+        <div className="modal-dialog" role="document">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">{this.state.id ? "Edit Dish" : "New Dish"}</h5>
+              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div className="modal-body">
+              <form onSubmit={this.handleSubmit.bind(this)}>
+                <div className="row">
+                  <div className="col-md-12 mb-3">
+                    <label htmlFor="validationDefault01">Item Name</label>
+                    <input type="text" 
+                    className="form-control" 
+                    id="form-name"
+                    name="name" 
+                    value={this.state.name}
+                    onChange={this.handleChange}
+                    required />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12 mb-3">
+                    <label htmlFor="validationDefault02">Description</label>
+                    <textarea
+                    className="form-control" 
+                    id="form-description" 
+                    name="description" 
+                    rows="4"
+                    value={this.state.description}
+                    onChange={this.handleChange}
+                    required />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-12 mb-3">
+                    <label htmlFor="validationDefault03">Price</label>
+                    <input type="text" 
+                    className="form-control" 
+                    id="form-price" 
+                    name="price" 
+                    value={this.state.price}
+                    onChange={this.handleChange}
+                    required />
+                  </div>
+                  <div className="col-md-12 mb-3">
+                    <label htmlFor="validationDefault04">Category</label>
+                    <input type="text" 
+                    className="form-control" 
+                    id="form-category" 
+                    name="category" 
+                    value={this.state.category}
+                    onChange={this.handleChange}
+                    required />
+                  </div>
+                  <input 
+                    type="hidden" 
+                    id="form-id"
+                    name="id" 
+                    value={this.state.id}
+                    onChange={this.handleChange} />
+                </div>
+              </form>
+            </div>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-primary" onClick={this.handleSubmit}>Save changes</button>
+              <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
-
-        <div>
-          {
-            this.props.categories.map((category) => {
-              return (
-                <Tab category={category} key={category} setCategory={this.setCategory.bind(this)} />
-              ); 
-            })
-          }
-          </div>
-
-        <form onSubmit={this.handleSubmit.bind(this)}>
-
-          <div className="row">
-            <div className="col-md-3">
-              <div className="dropdown">
-                <button className="btn btn-secondary dropdown-toggle" 
-                  type="button" 
-                  id="dropdownMenuButton" 
-                  data-toggle="dropdown" 
-                  aria-haspopup="true" 
-                  aria-expanded="false"
-                  >
-                  {this.state.category}
-                </button>
-              <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
-                {/* populate dishes here */}
-                {
-                  this.state.dishes.map((dish, index) => {
-                    return (
-                      <a className="dropdown-item" 
-                        href="#" 
-                        key={index}
-                        onClick={this.handleClick.bind(this, index)}>
-                        {dish.name}
-                      </a>
-                    );
-                  })
-                }
-
-              </div>
-            </div>
-          </div>
-          <br />
-          </div>
-            <div className="row">
-              <div className="col-md-6 mb-3">
-                <label htmlFor="validationDefault01">Item Name</label>
-                <input type="text" 
-                className="form-control" 
-                id="validationDefault01" 
-                value={this.state.name}
-                onChange={this.handleChange.bind(this, "name")}
-                required />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12 mb-3">
-                <label htmlFor="validationDefault02">Description</label>
-                <input type="text" 
-                className="form-control" 
-                id="validationDefault02" 
-                value={this.state.description}
-                onChange={this.handleChange.bind(this, "description")}
-                required />
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-6 mb-3">
-                <label htmlFor="validationDefault03">Price</label>
-                <input type="text" 
-                className="form-control" 
-                id="validationDefault03" 
-                value={this.state.price}
-                onChange={this.handleChange.bind(this, "price")}
-                required />
-                <div className="invalid-feedback">
-                  Please provide a valid city.
-                </div>
-              </div>
-              <div className="col-md-6 mb-3">
-                <label htmlFor="validationDefault04">Category</label>
-                <input type="text" 
-                className="form-control" 
-                id="validationDefault04" 
-                value={this.state.category}
-                onChange={this.handleChange.bind(this, "category")}
-                required />
-                <div className="invalid-feedback">
-                  Please provide a valid state.
-                </div>
-              </div>
-            </div>
-            <div className="row">
-                <div className="col-md-4 mb-3">
-                  <label htmlFor="validationDefault05">Last Edited By</label>
-                  <div className="card card-inverse">Enter Admin Name here</div>
-                  <div className="invalid-feedback">
-                    Please provide a valid zip.
-                  </div>
-                </div>
-                <div className="col-md-4 mb-3">
-                  <label htmlFor="validationDefault05">Date Edited</label>
-                  <div className="card card-inverse">Last Date Edited</div>
-                  <div className="invalid-feedback">
-                    Please provide a valid zip.
-                  </div>
-                </div>
-              </div>
-              <div className='text-center'>
-                <button 
-                className="btn btn-primary" 
-                type="submit"
-                onClick={this.handleSubmit.bind(this)}>Submit form</button>
-              </div>
-            <br />
-
-          </form>
       </div>
     );
   }

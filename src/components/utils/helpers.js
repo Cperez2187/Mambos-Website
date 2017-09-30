@@ -12,10 +12,12 @@ const helpers = {
         });
     },
 
-    // // get all dishes
-    // getDishes: function() {
-    //   return axios.get("/api/dishes");
-    // },
+    // get all dishes
+    getAllDishes: function() {
+      return axios.get("/api/dishes").then((response) => {
+        return response.data;
+      });
+    },
 
     // get dishes by category
     getDishes: function(category) {
@@ -34,17 +36,27 @@ const helpers = {
 
     // post dish by passing in dish object
     addDish: function(dish) {
+      console.log(dish);
       return axios.post("/api/dishes", dish);
     },
 
     // edit existing dish by id
     updateDish: function(dish, id) {
+      console.log("Dish",dish,"id",id)
       return axios.put("/api/dishes", {dish: dish, id: id});
     },
 
     // delete dish by id
     deleteDish: function(id) {
-      return axios.delete("/api/dishes", {id: id});
+      return axios.delete("/api/dishes", {
+        params: {
+            id: id
+        }
+      });
+    },
+
+    getDistinctCategories: function() {
+        return axios.get("/api/categories");
     }
 }
 
