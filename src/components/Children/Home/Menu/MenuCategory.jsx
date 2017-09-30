@@ -16,10 +16,8 @@ const MenuCategory = (props) => {
     return props.menuItems.map(dish => <MenuDish dish={dish} key={dish.id} />);
   }
   return (
-    <div className="row category-row">
-      <div className="col-md-12 container">
-        {formatDishes()}
-      </div>
+    <div className="menu-category row justify-content-center category-row clearfix">
+      {formatDishes()}
     </div>
   );
 }

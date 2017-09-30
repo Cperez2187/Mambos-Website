@@ -10,7 +10,7 @@ h1 {
 }
 
 .text-div {
-    padding-top: 10vh;
+    /*padding-top: 10vh;*/
     padding-bottom: 10vh;
     color: #30353B;
 }
@@ -82,6 +82,15 @@ a:focus {
 #section-contact {
     background-image: url("../images/texture.png");
     background-repeat: repeat;
+}
+
+#section-about,
+#section-menu > div,
+#section-social,
+#section-reviews > div,
+#contact {
+    padding-top:60px;
+    padding-bottom: 60px;
 }
 
 .parallax {

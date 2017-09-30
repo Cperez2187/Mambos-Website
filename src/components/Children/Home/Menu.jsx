@@ -15,6 +15,14 @@ export default class Menu extends Component {
   constructor(props) {
     super(props);
 
+    this.categoryMap = {
+      appetizers: ['appetizer','soup','salad'],
+      entrees: ['chicken','beef'],
+      specials: ['specials'],
+      sandwiches: ['sandwich'],
+      drinks: ['juice']
+    }
+
     this.state = { 
       menu: [],
       category: 'appetizers',
@@ -25,13 +33,18 @@ export default class Menu extends Component {
     this.setCategory = this.setCategory.bind(this);
     this.formatMenu = this.formatMenu.bind(this);
 
-    
+
   }
   
   componentWillMount() {
     // Get menu from database
     this.getMenu();
     
+  }
+
+  componentDidMount() {
+    let active = document.querySelector("#appetizers");
+    document.querySelector("#appetizers").className += " active";
   }
   
   // Retrieves menu from DB and updates the state
@@ -47,13 +60,8 @@ export default class Menu extends Component {
   // Creates new array for specific category from menu
   formatMenu(category) {
     console.log(this.state.menu);
-    if (category === 'soups-salads') {
-      // Combine soups and salads
-      return this.state.menu.filter(dish => dish.category === 'soup' || dish.category === 'salad');
-    }
 
-    return this.state.menu.filter(dish => dish.category === category); 
-
+    return this.state.menu.filter(dish => this.categoryMap[category].indexOf(dish.category) != -1); 
   }
 
   // Sets category from menu nav bar
@@ -67,7 +75,7 @@ export default class Menu extends Component {
   render() {
 
     return (
-      <section className="section-menu row" id="section-menu">
+      <section className="section-menu row parallax" id="section-menu">
         {/*Write code here */}
         <div className="translucent-bg col-md-12">
           <MenuNav category={ this.state.category } setCategory={this.setCategory} />
