@@ -32,6 +32,7 @@ export default class Home extends Component {
     return (
       <div className="home" id="home">
         {/* Write code here */}
+        
         <Carousel />
         <NavBar />
         <AboutUs />

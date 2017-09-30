@@ -37,6 +37,11 @@ export default class Admin extends Component {
     this.getMenu();
   }
 
+  componentDidUpdate() {
+    let active = document.querySelector("#tabs-" + this.state.category);
+    document.querySelector("#tabs-" + this.state.category).className += " active";
+  }
+
   // get entire menu and list of distinct categories
   getMenu() {
     helpers.getAllDishes().then((dishes) => {

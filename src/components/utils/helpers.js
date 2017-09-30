@@ -50,6 +50,7 @@ const helpers = {
   updateDish(dish, id) {
     return axios.put("/api/dishes", { dish, id }).then(result => {
       console.log('Updated: ', result);
+      return result.data;
     }).catch(err => {
       throw err;
     });
@@ -63,6 +64,7 @@ const helpers = {
       }
     }).then(result => {
       console.log('Deleted: ', result);
+      return result.data;
     }).catch(err => {
       throw err;
     });

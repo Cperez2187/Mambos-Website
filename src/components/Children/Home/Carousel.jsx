@@ -6,8 +6,15 @@
 */
 
 import React from 'react';
+import path from 'path';
 
 const Carousel = (props) => {
+  const imgURL1 = __dirname + "./images/FullSizeRender.jpg";
+  const imgURL2 = __dirname + "./images/IMG_0418.jpg";
+  const imgURL3 = __dirname + "./images/IMG_2571.jpg"
+
+  console.log(imgURL1,imgURL2,imgURL3);
+
   return (
 <div>
 
@@ -29,13 +36,13 @@ const Carousel = (props) => {
       {/* Images */}
       <div className="carousel-inner" role="listbox">
         <div className="carousel-item active">
-          <img className="d-block img-fluid" src="../../../images/FullSizeRender.jpg" alt="First slide" />
+          <img className="d-block img-fluid" src={imgURL1} alt="First slide" />
         </div>
         <div className="carousel-item">
-          <img className="d-block img-fluid" src="https://drive.google.com/drive/u/0/folders/0B7qVHDNARLkba2NSZ25PYzRRNDg" alt="Second slide" />
+          <img className="d-block img-fluid" src={imgURL2} alt="Second slide" />
         </div>
         <div className="carousel-item">
-          <img className="d-block img-fluid" src="../../../images/IMG_2571.jpg" alt="Third slide" />
+          <img className="d-block img-fluid" src={imgURL3} alt="Third slide" />
         </div>
       </div>
 
