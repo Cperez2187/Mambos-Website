@@ -9,9 +9,9 @@ import React from 'react';
 import path from 'path';
 
 const Carousel = (props) => {
-  const imgURL1 = __dirname + "./images/FullSizeRender.jpg";
-  const imgURL2 = __dirname + "./images/IMG_0418.jpg";
-  const imgURL3 = __dirname + "./images/IMG_2571.jpg"
+  const imgURL1 = __dirname + "images/FullSizeRender.jpg";
+  const imgURL2 = __dirname + "images/IMG_0418.jpg";
+  const imgURL3 = __dirname + "images/IMG_2571.jpg"
 
   console.log(imgURL1,imgURL2,imgURL3);
 
