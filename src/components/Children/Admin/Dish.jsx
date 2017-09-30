@@ -8,6 +8,15 @@
 import React from 'react';
 
 const Dish = (props) => {
+
+	const handleEdit = (event) => {
+		props.setUpdatedDish(props.dish);
+	}
+
+	const handleDelete = (event) => {
+		props.deleteDish(props.dish.id);
+	}
+
   return (
       <div className="admin-dish col-md-12">
    	  {/*Write code here */}
@@ -27,18 +36,15 @@ const Dish = (props) => {
 		    				type="button" 
 		    				data-toggle="modal" 
 		    				data-target="#form-query" 
-		    				data-id={props.dish.id} 
-		    				data-name={props.dish.name} 
-		    				data-description={props.dish.description} 
-		    				data-price={props.dish.price}
-		    				data-category={props.dish.category}
+		    				onClick={handleEdit}
 	    				>
 		    				Edit
 	    				</button>
 		    			<button 
 		    				className="btn btn-lg btn-danger btn-block" 
-		    				onClick={props.deleteDish} 
-		    				data-id={props.dish.id}>
+		    				type="button"
+		    				onClick={handleDelete} 
+		    			>
 		    				Delete
 	    				</button>
 		    		</div>
