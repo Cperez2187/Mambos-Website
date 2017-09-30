@@ -5,8 +5,8 @@
     "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "prod": "webpack & node server",
-        "start": "webpack & node server.js",
+        "dev": "webpack & node server",
+        "start": "webpack && node server",
         "build": "webpack"
     },
     "repository": {
