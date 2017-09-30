@@ -15,7 +15,7 @@ const helpers = {
   // get all dishes
   getAllDishes() {
     return axios.get("/api/dishes").then(result => {
-      console.log('All dishes: ', result.data);
+      // console.log('All dishes: ', result.data);
       return result.data;
     }).catch(err => {
       throw err;
@@ -23,7 +23,7 @@ const helpers = {
   },
 
   // get dishes by category
-  getDishes: function(category) {
+  getDishes(category) {
     console.log('helper: ' + category);
     return axios.get("/api/dishes", {
       params: {
@@ -47,7 +47,7 @@ const helpers = {
   },
 
   // edit existing dish by id
-  updateDish: function(dish, id) {
+  updateDish(dish, id) {
     return axios.put("/api/dishes", { dish, id }).then(result => {
       console.log('Updated: ', results);
     }).catch(err => {
@@ -56,7 +56,7 @@ const helpers = {
   },
 
   // delete dish by id
-  deleteDish: function(id) {
+  deleteDish(id) {
     return axios.delete("/api/dishes", {
       params: {
           id: id
@@ -66,11 +66,11 @@ const helpers = {
     }).catch(err => {
       throw err;
     });
-  }
+  },
 
-    getDistinctCategories: function() {
-        return axios.get("/api/categories");
-    }
+  getDistinctCategories: function() {
+      return axios.get("/api/categories");
+  }
 }
 
 export default helpers;

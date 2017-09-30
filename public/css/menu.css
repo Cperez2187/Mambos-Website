@@ -1,3 +1,19 @@
+#section-menu {
+	background-image: url("../images/menu.png");
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+}
 #menu-nav {
-  background-color: #3C5470
+  /*background-color: #3C5470*/
+  color: white;
+  padding: 30px;
+}
+
+#menu-nav a, #menu-nav a:visited {
+	color: white;
+}
+
+#menu-nav a:focus, #menu-nav a:hover, #menu-nav a.active {
+	color: #BBBBBB;
 }

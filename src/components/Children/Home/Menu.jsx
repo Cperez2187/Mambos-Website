@@ -17,13 +17,15 @@ export default class Menu extends Component {
 
     this.state = { 
       menu: [],
-      category: 'appetizers'
+      category: 'appetizers',
+      dishes: [],
     };
 
     // Bind methods
     this.setCategory = this.setCategory.bind(this);
     this.formatMenu = this.formatMenu.bind(this);
 
+    
   }
   
   componentWillMount() {
@@ -36,7 +38,7 @@ export default class Menu extends Component {
   getMenu() {
     
     helpers.getAllDishes().then(menu => {
-      console.log('Menu: ', menu);
+      // console.log('Menu: ', menu);
       this.setState({ menu });
     });
 
@@ -67,8 +69,10 @@ export default class Menu extends Component {
     return (
       <section className="section-menu row" id="section-menu">
         {/*Write code here */}
-        <MenuNav setCategory={this.setCategory} />
-        <MenuCategory category={this.state.category} menuItems={this.formatMenu(this.state.category)} />
+        <div className="translucent-bg col-md-12">
+          <MenuNav category={ this.state.category } setCategory={this.setCategory} />
+          <MenuCategory category={this.state.category} menuItems={this.formatMenu(this.state.category)} />
+        </div>
       </section>
     );
   }

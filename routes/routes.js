@@ -19,7 +19,7 @@ module.exports = (app) => {
     } else { // find all dishes
       db.Dish.findAll()
         .then(result => {
-          console.log('result: ', result);
+          // console.log('result: ', result);
           res.send(result); 
         }).catch(err => {
           if (err) throw err;
@@ -43,7 +43,7 @@ module.exports = (app) => {
         id:req.body.id
       }
     }).then((result) => {
-      console.log(result);
+      // console.log(result);
       res.send(result); 
     }).catch(err => {
       if (err) throw err;

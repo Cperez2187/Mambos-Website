@@ -8,14 +8,13 @@ import React from 'react';
 
 const MenuNav = (props) => {
 
+  document.querySelector("#" + props.category).className += "active";
+
   const handleNavClick = (event) => {
     console.log('Inside handleNavClick');
     console.log('event.target: ', event.target);
     // Set category in Menu component
-    // props.setCategory(category);
-
-    // document.querySelector('.active').removeClass();
-    // document.querySelector('#' + category).addClass('active');
+    props.setCategory(event.target.id);
   }
 
   return (
@@ -23,16 +22,19 @@ const MenuNav = (props) => {
       {/* Write code here */}
       <ul className="nav justify-content-center">
         <li className="nav-item">
-          <a className="nav-link" id="appetizers" href="" onClick={handleNavClick}>Appetizers</a>
+          <a className="nav-link" id="appetizers" className="display-4" onClick={handleNavClick}>Appetizers</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" id="soups-salads" href="" onClick={handleNavClick}>Soups/Salads</a>
+          <a className="nav-link" id="entrees" className="display-4" onClick={handleNavClick}>Entrees</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="" onClick={handleNavClick}>Entrees</a>
+          <a className="nav-link" id="specials" className="display-4" onClick={handleNavClick}>Specials</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="" onClick={handleNavClick}>Happy Hour</a>
+          <a className="nav-link" id="sandwiches" className="display-4" onClick={handleNavClick}>Sandwiches</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" id="drinks" className="display-4" onClick={handleNavClick}>Drinks</a>
         </li>
       </ul>
     </div>
