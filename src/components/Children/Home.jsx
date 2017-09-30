@@ -9,7 +9,7 @@ import React, { Component } from 'react';
 import NavBar from './Home/NavBar.jsx';
 import Carousel from './Home/Carousel.jsx';
 import AboutUs from './Home/AboutUs.jsx';
-import Menu from './Home/Menu/Menu.jsx';
+import Menu from './Home/Menu.jsx';
 import Social from './Home/Social.jsx';
 import Reviews from './Home/Reviews.jsx';
 import Contact from './Home/Contact.jsx';
