@@ -22,7 +22,7 @@ export default class Main extends Component {
   }
 
   componentDidMount() {
-    stickybits('.navbar');
+    // stickybits('.navbar');
   }
 
   render() {

@@ -1,4 +1,6 @@
 #mainNav {
+    position: fixed;
+    top: 0;
     background-color: #b94847;
     z-index: 999;
     top: -1px !important;
