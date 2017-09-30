@@ -11,21 +11,28 @@ module.exports = (app) => {
         where: {
           category: req.query.category // category: ["appetizer","drink","sides"]
         }
-      }).then((result) => {
+      }).then(result => {
         res.send(result); 
+      }).catch(err => {
+        throw err;
       });
     } else { // find all dishes
       db.Dish.findAll()
-        .then((result) => {
+        .then(result => {
+          // console.log('result: ', result);
           res.send(result); 
+        }).catch(err => {
+          if (err) throw err;
         });
     }
   });
 
   // insert new dishes item
   app.post("/api/dishes", (req, res) => {
-    db.Dish.create(req.body).then((result) => {
+    db.Dish.create(req.body).then(result => {
       res.send(result); 
+    }).catch(err => {
+      if (err) throw err;
     });
   });
 
@@ -36,8 +43,10 @@ module.exports = (app) => {
         id:req.body.id
       }
     }).then((result) => {
-      console.log(result);
+      // console.log(result);
       res.send(result); 
+    }).catch(err => {
+      if (err) throw err;
     });
   });
 

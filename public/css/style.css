@@ -10,7 +10,7 @@ h1 {
 }
 
 .text-div {
-    padding-top: 10vh;
+    /*padding-top: 10vh;*/
     padding-bottom: 10vh;
     color: #30353B;
 }
@@ -80,8 +80,17 @@ a:focus {
 #section-about,
 #section-social,
 #section-contact {
-    background-image: url("../images/concrete_seamless.png");
+    background-image: url("../images/texture.png");
     background-repeat: repeat;
+}
+
+#about,
+/*#section-menu > div,*/
+#section-social,
+#section-reviews > div,
+#contact {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .parallax {
