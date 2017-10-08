@@ -6,3 +6,5 @@ Technologies used: React.js, Node.js, Express.js, MySQL, Passport.js, bcrypt.js,
 ** Must have CORS (Cross-origin resource sharing) on in your browser in order to view Instagram photos and feed due to Instragram API.
 I suggest adding CORS toggle extension on Chrome browser and turning it on.
 Currently working on a fix for this.
+
+Hosted on Heroku: https://enigmatic-hamlet-25833.herokuapp.com/
