@@ -111,9 +111,10 @@ export default class Admin extends Component {
     if(confirm("Are you sure you want to delete this dish?")) {
       helpers.deleteDish(id).then((result) => {
         console.log("Deleted dish id:",id);
+        this.getMenu();
       });
     }
-    this.getMenu();
+    
   }
 
   render() {
